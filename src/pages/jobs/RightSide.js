@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import LogoSmg from '../../svg/logo_smg.svg'
+import LogoSmg from 'assets/svg/logo_smg.svg'
 
 export default function RightSide() {
   return (

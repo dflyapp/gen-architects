@@ -1,12 +1,12 @@
 import Image from 'next/image'
 
-import MoreDetail from './common/MoreDetail'
+import MoreDetail from 'components/common/MoreDetail'
 
-import IconMultiply from '../svg/icon_multiply.svg'
-import IconEqual from '../svg/icon_equal.svg'
-import IconQuote from '../svg/icon_quote.svg'
+import IconMultiply from 'assets/svg/icon_multiply.svg'
+import IconEqual from 'assets/svg/icon_equal.svg'
+import IconQuote from 'assets/svg/icon_quote.svg'
 
-import BgCoverRight from '../img/bg_cover_right3.jpg'
+import BgCoverRight from 'assets/img/bg_cover_right3.jpg'
 
 import styles from './Cover.module.css'
 

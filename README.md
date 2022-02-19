@@ -1,4 +1,4 @@
-Home page for Nhat Viet Group
+Home page for Gen Architects
 
 ## Getting Started
 
@@ -6,8 +6,6 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 ## Node JS Version

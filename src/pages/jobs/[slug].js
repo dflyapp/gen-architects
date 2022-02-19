@@ -7,9 +7,9 @@ import Head from 'next/head'
 
 import RightSide from './RightSide'
 import Stacks from './Stacks'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import Button from '../../components/common/Button'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import Button from '../components/common/Button'
 
 import styles from './Slug.module.css'
 

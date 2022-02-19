@@ -15,7 +15,7 @@
 .wrapper {
   @apply relative flex items-center overflow-hidden;
 
-  /* background-image: url(../svg/bg_cover_left.svg);
+  /* background-image: url(assets/svg/bg_cover_left.svg);
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: -40% center; */
@@ -26,8 +26,8 @@
   .wrapper {
     @apply relative;
 
-    /* background-image: url(../svg/bg_cover_left.svg),
-      url(../img/bg_cover_right.webp);
+    /* background-image: url(assets/svg/bg_cover_left.svg),
+      url(assets/img/bg_cover_right.webp);
     background-size: 55%, 55%;
     background-repeat: no-repeat, no-repeat;
     background-position: -40% center, right center; */
@@ -47,7 +47,7 @@
 .maskright {
   @apply hidden md:block;
 
-  mask-image: url(../svg/bg_cover_right_mask.svg);
+  mask-image: url(assets/svg/bg_cover_right_mask.svg);
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: 50%;

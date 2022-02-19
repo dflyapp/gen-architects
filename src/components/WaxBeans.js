@@ -1,9 +1,9 @@
 import Image from 'next/image'
 
-import Button from './common/Button'
+import Button from 'components/common/Button'
 import styles from './WaxBeans.module.css'
 
-import Wax from '../img/wax.webp'
+import Wax from 'assets/img/wax.webp'
 
 export default function LearnAndGrow() {
   return (

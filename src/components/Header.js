@@ -4,12 +4,12 @@ import Image from 'next/image'
 import { scroller } from 'react-scroll'
 import { useRouter } from 'next/router'
 
-import Button from './common/Button'
+import Button from 'components/common/Button'
 
-import LogoNvg from '../svg/logo-nvg.svg'
-import IconHambuger from '../svg/icon_hambuger.svg'
-import IconClose from '../svg/icon_close.svg'
-import IconArrow from '../svg/icon_arrow.svg'
+import LogoNvg from 'assets/svg/logo-nvg.svg'
+import IconHambuger from 'assets/svg/icon_hambuger.svg'
+import IconClose from 'assets/svg/icon_close.svg'
+import IconArrow from 'assets/svg/icon_arrow.svg'
 
 import styles from './Header.module.css'
 

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import IconArrow from '../../svg/icon_arrow.svg'
+import IconArrow from 'assets/svg/icon_arrow.svg'
 import styles from './Button.module.css'
 
 export default function Button({ label, type, onClick }) {

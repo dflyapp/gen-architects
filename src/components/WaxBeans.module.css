@@ -1,11 +1,11 @@
 .wrapper {
   @apply py-24 bg-primary relative;
 
-  background: url(../svg/bg_learn_color.svg);
+  background: url(assets/svg/bg_learn_color.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top left;
-  /* background: url(../img/bg_learn.webp), url(../svg/bg_learn_color.svg);
+  /* background: url(assets/img/bg_learn.webp), url(assets/svg/bg_learn_color.svg);
   background-size: contain, cover;
   background-repeat: no-repeat no-repeat;
   background-position: top right, top left; */
@@ -16,7 +16,7 @@
   height: 100%;
   width: 60%;
 
-  mask-image: url(../svg/bg_learn_mask.svg);
+  mask-image: url(assets/svg/bg_learn_mask.svg);
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: 100%;

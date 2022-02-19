@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
-import Button from './common/Button'
-import Motran from '../img/motran.jpg'
+import Button from 'components/common/Button'
+import Motran from 'assets/img/motran.jpg'
 
 import styles from './MoTran.module.css'
 

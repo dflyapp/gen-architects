@@ -1,0 +1,24 @@
+---
+title: 'Collagen chống lão hóa như thế nào?'
+date: 'Sep 11, 2021'
+excerpt: 'Collagen là một loại Protein chiếm khoảng 30% trong cơ thể con người và các động vật có xương sống. Collagen đa số tập trung nhiều ở da'
+cover_image: '/images/posts/img3.jpg'
+---
+
+# 1. Collagen là gì?
+
+Collagen là một loại Protein chiếm khoảng 30% trong cơ thể con người và các động vật có xương sống. Collagen đa số tập trung nhiều ở da, xương, khớp, mạch máu… Collagen có thể được coi là một chất quan trọng không thể thiếu đối với cơ thể, vì chúng có ở đa số các bộ phận của cơ thể. Chúng ta sẽ bị ảnh hưởng rất nhiều đến sức khỏe, da, xương khớp khi mà cơ thể không còn sản sinh nhiều collagen nữa. Collagen được coi là một chất kết dính trong cơ thể chúng ta, nó có tác dụng là liên kết các tế bào lại với nhau để tạo nên các mô và các cơ quan nền tảng trong cơ thể. Collagen cũng có rất nhiều trong xương và răng được coi là chất mà giúp cho cơ thể chống lại các bệnh như loãng xương, chống rạn nứt. Ở các bộ phận như da, cơ, khớp collagen đóng vai trò lớn tại nên sự đàn hồi cũng như sự dẻo dai trong cơ thể, vì thế chúng ta sẽ khó chuyển động dẻo dai nếu thiếu chất này trong cơ thể chúng ta.
+
+# 2. Collagen có tác dụng gì trong việc chống lão hóa?
+
+Khi bước sang độ tuổi 35, cơ thể sẽ có những thay đổi rõ rệt về sức khỏe, đặc biệt là da và xương. Xương khớp sẽ mất dần sự dẻo dai và linh hoạt trong khi da sẽ xuất hiện nhiều vết nhăn, rạn, nám, chảy xệ. Quá trình lão hóa diễn ra ở phụ nữ nhanh hơn nam giới, đặc biệt là sau khi sinh. Những điều này xảy ra là do hàm lượng collagen được sản sinh ra trong cơ thể đang giảm dần. Khi chức năng sản sinh collagen đã giảm đi, việc bổ sung collagen cho cơ thể là vô cùng quan trọng.
+
+Để bổ sung collagen, chúng ta có 2 cách chính là bổ sung bằng thức ăn và bằng thực phẩm chức năng. Một số loại thức ăn có thể kể đến như lòng trắng trứng, cá hồi, thịt gà, trái cây có chứ nhiều vitamin C. Tuy nhiên, để tối ưu việc chống lão hóa, tốt nhất chúng ta vẫn cần bổ sung thêm thực phẩm chức năng chuyên về collagen. Những thực phẩm chức năng này cho hiệu quả cao hơn do được điều chế đúng phương pháp giúp cơ thể dễ hấp thu nhất. Đây là cách giữ được sự trẻ trung của nhiều nhân vật nổi tiếng. Họ đã hiểu rõ mức độ quan trọng của collagen và đã bổ sung collagen từ rất sớm.
+
+# 3. Nên sử dụng Collagen như thế nào để có hiệu quả cao nhất?
+
+Theo các chuyên gia, để tối ưu việc chống lão hóa, chúng ta nên bổ sung collagen cho cơ thể sớm, tốt nhất là từ 22 tuổi. Việc bổ sung sớm collagen không hề vô ích. Điều này giúp cơ thể dự trữ một lượng lớn collagen để khi quá trình lão hóa xảy ra trên toàn cơ thể, cơ thể có đủ collagen để tái tạo tế bào. Collagen mà ta đã dự trữ từ trước sẽ hết sức cần thiết khi cung cấp chất dinh dưỡng cho da, cũng như tránh mất đi độ ẩm và độ đàn hồi của làn da. Đối với hiện tại cuộc sống nhộn nhịp thì công việc áp lực công việc cũng như bụi bẩn và stress sẽ làm cho làn da chúng ta dần mất đi chất dinh dưỡng. Từ đó sẽ xuất hiện sạm, nám và vết nhăn làm da lão hóa sớm nên chúng ta nên bổ sung Collagen từ sớm tầm 22 tuổi thì sẽ giúp cho chúng ta dự trữ Collagen nhiều. Và cung cấp đủ Collagen để làm đẹp, đảy nhanh quá trình tái tạo làn da. 
+
+Thông thường chúng ta nên bổ sung khoảng 5g Collagen/ngày và khoảng 2.5g/ngày nếu là Collagen Peptide. Cơ thể con người sẽ hấp thụ được một lượng Collagen nhất định trung bình từ 1000mg – 1500mg, khi vượt qua mức này thì Collagen sẽ bị dào thải ra ngoài gây lãng phí. Thường nhiều người sẽ có thói quen dùng thực phẩm chức năng tùy tiện khi nào nhớ thì uống miễn là trong ngày là được. Tuy nhiên, điều này là không tốt, vì khi uống Collagen khi dang đói sẽ dẫn tới những hiện tượng như là bụng cồn cào, khó chịu ở bụng và sẽ không có cảm giác thèm ăn,… Thời điểm tốt nhất để uống thực phẩm chức năng Collagen là sau bữa ăn 30 phút hoặc trước khi đi ngủ, khi đó cơ thể sẽ tiếp nhận Collagen tốt nhất trong cơ thể. Không những vậy khi bổ sung collagen sau ăn sẽ tránh được các bệnh về đường tiêu hóa đồng thời cung cấp chất dinh dưỡng để làm đẹp da.
+
+Hiện nay trên thị trường có nhiều dạng sản phẩm chức năng bổ sung collagen như nước uống, viên uống và kẹo. Các dạng sản phẩm này khá tương đồng nhau về hiệu quả. Tuy nhiên, cần lưu ý về hàm lượng và các chất đi kèm. Một số loại sản phẩm có bổ sung Vitamin C và Estrogen đi kèm sẽ rất tốt để tối ưu việc chống lão hóa, tăng sức đề kháng cũng như cải thiện tâm sinh lý của phụ nữ. Theo một bảng khảo sát được thực hiện gần đây, nhiều người dùng cho rằng việc sử dụng kẹo collagen sẽ mang đến hiệu quả tốt hơn vì tâm lý của họ khi sử dụng là “được ăn kẹo” thay vì “phải uống thuốc”. Sẽ là tiện lợi hơn cho người dùng khi họ mang theo 1 hũ kẹo đi làm. Họ sẽ bổ sung collagen được nhiều lần trong ngày với hàm lượng vừa phải giúp cơ thể hấp thu tốt hơn. Và họ sẽ bổ sung collagen đơn giản như việc ăn kẹo, không hay quên bổ sung collagen như hình thức “phải uống thuốc”.

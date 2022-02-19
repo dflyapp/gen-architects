@@ -1,0 +1,57 @@
+.wrapper {
+  @apply py-24 bg-primary relative;
+
+  background: url(../svg/bg_learn_color.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
+  /* background: url(../img/bg_learn.webp), url(../svg/bg_learn_color.svg);
+  background-size: contain, cover;
+  background-repeat: no-repeat no-repeat;
+  background-position: top right, top left; */
+}
+
+.bglearn {
+  @apply absolute right-0 top-0 z-20 overflow-hidden;
+  height: 100%;
+  width: 60%;
+
+  mask-image: url(../svg/bg_learn_mask.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100%;
+}
+
+.masonry {
+  @apply mt-12;
+  /* Masonry container */
+  column-count: 1;
+  column-gap: 1em;
+}
+
+@media screen(md) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+.card {
+  @apply bg-white p-6 mt-4;
+
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1), 0px 4px 12px rgba(0, 0, 0, 0.05);
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+}
+
+.card h4 {
+  @apply font-medium text-darkblue mt-2;
+
+  font-size: 1rem;
+}
+
+.card p {
+  @apply text-gray8 leading-5 mt-4;
+
+  font-size: 14px;
+}

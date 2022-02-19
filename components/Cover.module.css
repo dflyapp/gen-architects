@@ -1,0 +1,68 @@
+.wrapperbg {
+  width: 100vw;
+  height: 100vh;
+  background-color: #50b9b4;
+  background-image: linear-gradient(
+    222.23deg,
+    #223642 67.21%,
+    rgba(87, 87, 87, 0.5) 85.49%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.wrapper {
+  @apply relative flex items-center overflow-hidden;
+
+  /* background-image: url(../svg/bg_cover_left.svg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: -40% center; */
+  height: 100vh;
+}
+
+@media screen(lg) {
+  .wrapper {
+    @apply relative;
+
+    /* background-image: url(../svg/bg_cover_left.svg),
+      url(../img/bg_cover_right.webp);
+    background-size: 55%, 55%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: -40% center, right center; */
+  }
+}
+
+.maskleft {
+  @apply absolute my-auto w-full lg:w-7/12 z-10 block md:hidden lg:block;
+  left: -12rem;
+}
+
+.maskrightwrapper {
+  @apply absolute my-auto z-10 w-1/4;
+  right: 10%;
+}
+
+.maskright {
+  @apply hidden md:block;
+
+  mask-image: url(../svg/bg_cover_right_mask.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 50%;
+}
+
+@keyframes moveupdown {
+  0%, 100% {
+    bottom: 1rem;
+  }
+  50% {
+    bottom: 30px;
+  }
+}
+
+.moredetail {
+  @apply absolute bottom-4 left-0 right-0 mx-auto z-10;
+  animation: moveupdown 1.5s ease-in-out infinite;
+}

@@ -1,0 +1,50 @@
+.wrapper {
+  @apply py-36 bg-gray2 px-4 lg:px-0;
+}
+
+.wrapper h3 {
+  @apply mt-8 mb-4 text-primarydark;
+}
+
+.wrapper p {
+  @apply text-deepblue text-sm;
+}
+
+.wrapper li {
+  @apply list-disc ml-5 text-sm;
+}
+
+.stacks {
+  transition: height 2s;
+  @apply overflow-hidden;
+}
+/* 
+.stacks_show {
+  @apply h-auto transition duration-150 ease-out overflow-hidden;
+}
+
+.stacks_hide {
+  @apply h-36 transition duration-300 ease-out overflow-hidden;
+}
+
+.stacks_hide:hover {
+  height: auto;
+} */
+
+.stacks p {
+  @apply leading-5 mt-2;
+}
+
+.button {
+  @apply bg-primary text-white px-12 py-2 mt-4 flex items-center rounded-md border border-primary;
+}
+
+.button:hover {
+  @apply text-primary border-primary;
+}
+.button:hover svg path {
+  fill: #50B9B4;
+}
+.divider {
+  @apply flex items-center justify-center;
+}

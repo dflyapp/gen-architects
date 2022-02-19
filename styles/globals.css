@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-transparent {
+    background-color: transparent;
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+li {
+  font-family: 'Roboto', sans-serif;
+}
+
+.big-heading {
+  @apply text-5xl md:text-6xl lg:text-7xl text-center;
+}
+
+.badge {
+  @apply rounded-lg px-4 py-2 mx-2 font-light;
+}
+
+.is-hide {
+  @apply h-36;
+}
+
+.is-show {
+  @apply h-auto;
+}
+
+button:hover {
+  background: transparent;
+}

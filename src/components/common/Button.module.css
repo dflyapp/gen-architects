@@ -1,9 +1,0 @@
-.btn {
-  @apply flex items-center px-8 py-3 rounded-lg bg-lightblue text-white;
-}
-
-.btn:hover {
-  background-color: transparent;
-  @apply rounded-lg;
-}
-

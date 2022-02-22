@@ -1,14 +1,9 @@
-import Header from 'components/Header'
-import Footer from 'components/Footer'
-
-import styles from 'styles/Blog.module.css'
 
 export default function PostPage() {
   return (
     <>
-      <div className={styles.cover}>
+      <div>
         <div className='container mx-auto'>
-          <Header />
           <h1 className='text-center'>Title</h1>
         </div>
       </div>
@@ -17,9 +12,6 @@ export default function PostPage() {
           <p>content</p>
         </div>
       </div>
-
-      {/* footer */}
-      <Footer />
     </>
   )
 }

@@ -5,6 +5,3 @@
   @apply relative overflow-hidden;
 }
 
-.swiper-pagination {
-  display: none !important;
-}

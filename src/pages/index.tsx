@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
 
       <div className={styles.wrapper}>
-        <header className="flex justify-between p-4">
+        <header className="flex justify-between p-8">
           <div className="flex items-center">
             <a className="text-2xl">Gallery</a>
             <span className="mx-2">/</span>
@@ -26,11 +26,11 @@ export default function Home() {
           </div>
         </header>
 
-        <div className="px-4">
+        <div className="px-8">
           <hr />
         </div>
 
-        <div className="mt-4 px-4">
+        <div className="mt-8 px-8">
           <img
             style={{ width: 80, height: "auto" }}
             src={LogoPicture.src}
@@ -42,7 +42,7 @@ export default function Home() {
           <Sliders />
         </div>
 
-        <div className="absolute bottom-4 left-4">
+        <div className="absolute bottom-8 left-8">
           <img
             style={{ width: 300, height: "auto" }}
             src={LogoText.src}

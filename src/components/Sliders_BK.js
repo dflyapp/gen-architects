@@ -1,9 +1,12 @@
 import React, { useRef, useEffect } from "react";
-import dynamic from "next/dynamic";
+
 import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";
 import gsap from "gsap";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import Cover1 from "assets/img/cover1.jpg";
 import Cover2 from "assets/img/cover2.jpg";
@@ -12,53 +15,75 @@ import Cover4 from "assets/img/cover4.jpg";
 import Cover5 from "assets/img/cover5.jpg";
 import Cover6 from "assets/img/cover6.jpg";
 
-import * as $ from "jquery";
-
-// const DynamicComponent = dynamic(() => {
-//   if (typeof window !== "undefined") {
-//     import("flickity/dist/flickity.pkgd")
-//   }
-// })
+import styles from "./Sliders.module.css";
 
 export default function Sliders() {
-  useEffect(async () => {
-    const Flickity = await import("flickity/dist/flickity.pkgd");
-    console.log(Flickity);
-    const elem = document.querySelector(".main-carousel");
-    const flkty = new Flickity.default(elem, {
-      // options
-      cellAlign: "left",
-      contain: true,
-      height: "160px",
-    });
-
-    // $(".main-carousel").flickity({
-    //   // options
-    //   cellAlign: "left",
-    //   contain: true,
-    // });
-  }, []);
-
   const belowText = useRef();
+
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    slidesToShow: 3,
+    speed: 500,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+    ],
+    onInit: () => {
+      gsap.fromTo(belowText.current, { y: 50 }, { duration: 0.5, y: 0 });
+    }
+  };
+
   useEffect(() => {
     gsap.fromTo(belowText.current, { y: 50 }, { duration: 0.5, y: 0 });
   });
 
   return (
     <div>
-      <div className="main-carousel">
-        <div className="carousel-cell">
-          <h1 ref={belowText}>below text</h1>
-          <Image placeholder="blur" src={Cover1} alt="cover 1" />
+      <Slider {...settings}>
+        <div className={styles.slider}>
+          <Link href="/work/1">
+            <Image placeholder="blur" src={Cover2} alt="cover 2" />
+          </Link>
+          <div className="flex justify-between" ref={belowText}>
+            <h4>Conversation</h4>
+            <h5>West Hall</h5>
+          </div>
+          <div className="absolute right-0 top-0">
+            <span className="rotate-90">GEN 31---219</span>
+          </div>
         </div>
-        <div className="carousel-cell">
-          <Image placeholder="blur" src={Cover2} alt="cover 2" />
-        </div>
-        <div className="carousel-cell">
+        <div className={styles.slider}>
           <Image placeholder="blur" src={Cover3} alt="cover 3" />
         </div>
-      </div>
-
+        <div className={styles.slider}>
+          <Image placeholder="blur" src={Cover4} alt="cover 4" />
+        </div>
+        <div className={styles.slider}>
+          <Image placeholder="blur" src={Cover5} alt="cover 5" />
+        </div>
+        <div className={styles.slider}>
+          <Image placeholder="blur" src={Cover6} alt="cover 6" />
+        </div>
+        <div className={styles.slider}>
+          <Image placeholder="blur" src={Cover1} alt="cover 1" />
+        </div>
+      </Slider>
     </div>
   );
 }

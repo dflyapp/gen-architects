@@ -12,13 +12,7 @@ import Cover4 from "assets/img/cover4.jpg";
 import Cover5 from "assets/img/cover5.jpg";
 import Cover6 from "assets/img/cover6.jpg";
 
-import * as $ from "jquery";
-
-// const DynamicComponent = dynamic(() => {
-//   if (typeof window !== "undefined") {
-//     import("flickity/dist/flickity.pkgd")
-//   }
-// })
+import styles from "./Sliders.module.scss";
 
 export default function Sliders() {
   useEffect(async () => {
@@ -30,6 +24,10 @@ export default function Sliders() {
       cellAlign: "left",
       contain: true,
       height: "160px",
+      freeScroll: true,
+      wrapAround: true,
+      prevNextButtons: false,
+      pageDots: false,
     });
 
     // $(".main-carousel").flickity({
@@ -45,20 +43,71 @@ export default function Sliders() {
   });
 
   return (
-    <div>
+    <div className={styles.sliderswrapper}>
       <div className="main-carousel">
-        <div className="carousel-cell">
+        <Link href="/work/1" className="carousel-cell mx-4">
+          <div>
+            <Image
+              height={400}
+              width={500}
+              placeholder="blur"
+              src={Cover1}
+              alt="cover 1"
+            />
+            <h1 ref={belowText}>below text</h1>
+          </div>
+        </Link>
+        <div className="carousel-cell mx-">
+          <Image
+            height={400}
+            width={500}
+            placeholder="blur"
+            src={Cover2}
+            alt="cover 2"
+          />
           <h1 ref={belowText}>below text</h1>
-          <Image placeholder="blur" src={Cover1} alt="cover 1" />
         </div>
-        <div className="carousel-cell">
-          <Image placeholder="blur" src={Cover2} alt="cover 2" />
+        <div className="carousel-cell mx-">
+          <Image
+            height={400}
+            width={500}
+            placeholder="blur"
+            src={Cover3}
+            alt="cover 3"
+          />
+          <h1 ref={belowText}>below text</h1>
         </div>
-        <div className="carousel-cell">
-          <Image placeholder="blur" src={Cover3} alt="cover 3" />
+        <div className="carousel-cell mx-">
+          <Image
+            height={400}
+            width={500}
+            placeholder="blur"
+            src={Cover4}
+            alt="cover 4"
+          />
+          <h1 ref={belowText}>below text</h1>
+        </div>
+        <div className="carousel-cell mx-">
+          <Image
+            height={400}
+            width={500}
+            placeholder="blur"
+            src={Cover5}
+            alt="cover 5"
+          />
+          <h1 ref={belowText}>below text</h1>
+        </div>
+        <div className="carousel-cell mx-">
+          <Image
+            height={400}
+            width={500}
+            placeholder="blur"
+            src={Cover6}
+            alt="cover 6"
+          />
+          <h1 ref={belowText}>below text</h1>
         </div>
       </div>
-
     </div>
   );
 }

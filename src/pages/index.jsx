@@ -4,7 +4,6 @@ import Head from "next/head";
 
 import LogoPicture from "assets/svg/logo_picture.svg";
 import LogoText from "assets/svg/logo_text.svg";
-import styles from "./index.module.css";
 
 import Sliders from "components/Sliders";
 
@@ -25,7 +24,7 @@ export default function Home() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <div className={styles.wrapper}>
+      <div className="w-screen h-screen relative overflow-hidden">
         <header className="flex justify-between p-8">
           <div ref={gallery} className="flex items-center">
             <a className="text-2xl">Gallery</a>

@@ -1,49 +1,45 @@
-import React, { useRef, useEffect } from "react";
-import dynamic from "next/dynamic";
-import Image from "next/image";
-import Link from "next/link";
-import Slider from "react-slick";
-import gsap from "gsap";
+import React, { useRef, useEffect } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import gsap from 'gsap'
 
-import Cover1 from "assets/img/cover1.jpg";
-import Cover2 from "assets/img/cover2.jpg";
-import Cover3 from "assets/img/cover3.jpg";
-import Cover4 from "assets/img/cover4.jpg";
-import Cover5 from "assets/img/cover5.jpg";
-import Cover6 from "assets/img/cover6.jpg";
-
-import styles from "./Sliders.module.scss";
+import Cover1 from 'assets/img/cover1.jpg'
+import Cover2 from 'assets/img/cover2.jpg'
+import Cover3 from 'assets/img/cover3.jpg'
+import Cover4 from 'assets/img/cover4.jpg'
+import Cover5 from 'assets/img/cover5.jpg'
+import Cover6 from 'assets/img/cover6.jpg'
 
 export default function Sliders() {
   useEffect(async () => {
-    const Flickity = await import("flickity/dist/flickity.pkgd");
-    console.log(Flickity);
-    const elem = document.querySelector(".main-carousel");
+    const Flickity = await import('flickity/dist/flickity.pkgd')
+    console.log(Flickity)
+    const elem = document.querySelector('.main-carousel')
     const flkty = new Flickity.default(elem, {
       // options
-      cellAlign: "left",
+      cellAlign: 'left',
       contain: true,
-      height: "160px",
+      height: '160px',
       freeScroll: true,
       wrapAround: true,
       prevNextButtons: false,
       pageDots: false,
-    });
+    })
 
     // $(".main-carousel").flickity({
     //   // options
     //   cellAlign: "left",
     //   contain: true,
     // });
-  }, []);
+  }, [])
 
-  const belowText = useRef();
+  const belowText = useRef()
   useEffect(() => {
-    gsap.fromTo(belowText.current, { y: 50 }, { duration: 0.5, y: 0 });
-  });
+    gsap.fromTo(belowText.current, { y: 50 }, { duration: 0.5, y: 0 })
+  })
 
   return (
-    <div className={styles.sliderswrapper}>
+    <div className="sliders-wrapper">
       <div className="main-carousel">
         <Link href="/work/1" className="carousel-cell mx-4">
           <div>
@@ -109,45 +105,5 @@ export default function Sliders() {
         </div>
       </div>
     </div>
-  );
+  )
 }
-
-/*
-import { Pagination } from "swiper";
-
-export default function Sliders() {
-  return (
-    <>
-      <Swiper
-        slidesPerView={3}
-        spaceBetween={100}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper"
-        navigation={false}
-      >
-        <SwiperSlide>
-          <Image placeholder="blur" src={Cover1} alt="cover 1" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image placeholder="blur" src={Cover2} alt="cover 2" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image placeholder="blur" src={Cover3} alt="cover 3" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image placeholder="blur" src={Cover4} alt="cover 4" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image placeholder="blur" src={Cover5} alt="cover 5" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image placeholder="blur" src={Cover6} alt="cover 6" />
-        </SwiperSlide>
-      </Swiper>
-    </>
-  );
-}
-*/

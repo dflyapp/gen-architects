@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import 'styles/globals.scss'
 import "flickity/dist/flickity.min.css"
 
 import type { AppProps } from 'next/app'

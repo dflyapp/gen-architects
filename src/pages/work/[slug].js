@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-
 import LogoPicture from "assets/svg/logo_picture.svg";
 
 export default function WrokPage() {

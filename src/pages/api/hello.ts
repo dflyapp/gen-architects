@@ -5,10 +5,6 @@ type Data = {
   name: string
 }
 
-const x: Data = {
-  hello: 'x',
-}
-
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>

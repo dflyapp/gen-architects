@@ -13,6 +13,7 @@ module.exports = {
       deepblue: '#132A3E',
       lightblue: '#028FE3',
       yellow5: '#FFB761',
+      prbred: '#dc481e',
       black: colors.black,
       white: colors.white,
       gray: colors.gray,

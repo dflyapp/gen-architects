@@ -3,12 +3,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import gsap from 'gsap'
 
-import Cover1 from 'assets/img/cover1.jpg'
-import Cover2 from 'assets/img/cover2.jpg'
-import Cover3 from 'assets/img/cover3.jpg'
-import Cover4 from 'assets/img/cover4.jpg'
-import Cover5 from 'assets/img/cover5.jpg'
-import Cover6 from 'assets/img/cover6.jpg'
+import { Model } from './Model'
 
 export default function Sliders() {
   const router = useRouter()
@@ -43,22 +38,26 @@ export default function Sliders() {
   return (
     <div className="mt-8 sliders-wrapper">
       <div className="main-carousel">
-        {[Cover1, Cover2, Cover3, Cover4, Cover5, Cover6].map((e) => {
+        {Model.map((e) => {
           return (
             <div
               className="carousel-cell"
-              key={e}
+              key={e.id}
               onClick={(event) => {
                 console.log("i am click or drag: ", isDragging)
                 if (!isDragging) {
-                  router.push('/work/1')
+                  // router.push(`/work/${e.id}`)
+                  router.push({
+                    pathname: '/work/[pid]',
+                    query: { pid: e.id },
+                  })
                 }
               }}
             >
-              <Image height={400} width={500} src={e} alt="cover 1" />
+              <Image height={400} width={500} src={e.cover} alt="cover image" />
               <div className="flex justify-between items-center">
-                <h4>Is the commit</h4>
-                <h5>Towl Hall</h5>
+                <h4>{e.name}</h4>
+                <h5>{e.category}</h5>
               </div>
             </div>
           )

@@ -24,9 +24,9 @@ export default function Sliders() {
       setIsDragging(false)
     })
 
-    flkty.on( 'pointerMove', function() {
+    flkty.on('pointerMove', function () {
       setIsDragging(true)
-    });
+    })
   }, [])
 
   const belowText = useRef()
@@ -41,10 +41,10 @@ export default function Sliders() {
         {Model.map((e) => {
           return (
             <div
-              className="carousel-cell"
+              className="carousel-cell px-12"
               key={e.id}
               onClick={(event) => {
-                console.log("i am click or drag: ", isDragging)
+                console.log('i am click or drag: ', isDragging)
                 if (!isDragging) {
                   // router.push(`/work/${e.id}`)
                   router.push({
@@ -54,10 +54,23 @@ export default function Sliders() {
                 }
               }}
             >
-              <Image height={400} width={500} src={e.cover} alt="cover image" />
+              <div className="relative">
+                <Image
+                  height={400}
+                  width={500}
+                  src={e.cover}
+                  alt="cover image"
+                />
+                <span
+                  className="absolute -right-14 top-0 text-sm"
+                  style={{ transform: 'rotate(90deg)' }}
+                >
+                  {e.tag}
+                </span>
+              </div>
               <div className="flex justify-between items-center">
-                <h4>{e.name}</h4>
-                <h5>{e.category}</h5>
+                <h4 className="text-md font-light">{e.name}</h4>
+                <h5 className="text-sm">{e.category}</h5>
               </div>
             </div>
           )

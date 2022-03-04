@@ -5,13 +5,6 @@ import { useEffect, useState } from 'react'
 
 import LogoPicture from 'assets/svg/logo_picture.svg'
 
-import Picture1 from 'assets/img/1/1.jpg'
-import Picture2 from 'assets/img/1/2.jpg'
-import Picture3 from 'assets/img/1/3.jpg'
-import Picture4 from 'assets/img/1/4.jpg'
-import Picture5 from 'assets/img/1/5.jpg'
-import Picture6 from 'assets/img/1/6.jpg'
-
 import Detail1 from 'components/Detail1'
 import Contact from 'components/Contact'
 import Footer from 'components/Footer'
@@ -70,11 +63,11 @@ export default function WrokPage() {
       </div>
 
       <div className="mt-8 flex">
-        <div className="bg-gray8" style={{ width: '800px', height: '700px' }}>
+        <div className="hidden sm:block bg-gray8" style={{ width: '800px', height: '700px' }}>
           {model && <Image src={model.images[0].src} alt="picture 1" />}
         </div>
         <div className="flex justify-center items-center w-full relative">
-          <div className="absolute left-4 top-4">
+          <div className="hidden sm:block absolute left-4 top-4">
             <Image src={LogoPicture} alt="logo" />
           </div>
 
@@ -87,29 +80,29 @@ export default function WrokPage() {
 
       <Detail1 description={model.description} packages={model.package} />
 
-      <div className="mt-48 flex justify-between px-4">
-        <div className="w-1/4 mr-24">
+      <div className="mt-24 sm:mt-48 flex flex-wrap justify-between px-4">
+        <div className="w-full sm:w-1/4 pr-2 md:pr-24">
           {model && <Image src={model.images[3].src} alt="picture 4" />}
           <div className="flex justify-between items-center">
-            {model && <h4>{model.images[3].detail}</h4>}
-            <span>{model.tag}</span>
+            {model && <h4 className='text-sm'>{model.images[3].detail}</h4>}
+            <span className='text-sm'>{model.tag}</span>
           </div>
         </div>
-        <div className="w-3/4 ml-24 mt-48">
+        <div className="w-full sm:w-3/4 pl-2 md:pl-24 mt-48">
           {model && <Image src={model.images[2].src} alt="picture 3" />}
           <div className="flex justify-between items-center">
-            {model && <h4>{model.images[2].detail}</h4>}
-            <span>{model.tag}</span>
+            {model && <h4 className='text-sm'>{model.images[2].detail}</h4>}
+            <span className='text-sm'>{model.tag}</span>
           </div>
         </div>
       </div>
 
-      <div className="mt-48 px-4">
-        <div className="w-3/4 mx-auto">
+      <div className="mt-24 sm:mt-48 px-4">
+        <div className="w-full sm:w-3/4 mx-auto">
           {model && <Image src={model.images[4].src} alt="picture 5" />}
           <div className="flex justify-between items-center">
-            {model && <h4>{model.images[4].detail}</h4>}
-            <span>{model.tag}</span>
+            {model && <h4 className='text-sm'>{model.images[4].detail}</h4>}
+            <span className='text-sm'>{model.tag}</span>
           </div>
         </div>
       </div>

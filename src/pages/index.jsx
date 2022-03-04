@@ -43,7 +43,7 @@ export default function Home() {
         <div className="mt-8 px-8">
           <img
             ref={logoPic}
-            style={{ width: 80, height: "auto" }}
+            style={{ width: 50, height: "auto" }}
             src={LogoPicture.src}
             alt="gen"
           />
@@ -55,7 +55,7 @@ export default function Home() {
 
         <div className="absolute bottom-8 left-8">
           <img
-            style={{ width: 300, height: "auto" }}
+            style={{ width: 200, height: "auto" }}
             src={LogoText.src}
             alt="gen"
           />

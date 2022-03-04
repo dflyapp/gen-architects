@@ -6,9 +6,9 @@ export default function Detail1({ description, packages }) {
         {packages &&
           packages.map((ele, index) => {
             return (
-              <div key={index} className="border-t-2 border-white text-white p-4 flex items-top">
+              <div key={index} className="border-t border-white text-white p-4 flex items-top">
                 <sub className="mr-2">{`0${index + 1}`}</sub>
-                <h3 className="text-sm sm:text-lg">{ele}</h3>
+                <h3 className="text-sm sm:text-4xl font-light">{ele}</h3>
               </div>
             )
           })}

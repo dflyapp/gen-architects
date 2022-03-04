@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import Image from 'components/Image'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
@@ -81,28 +81,28 @@ export default function WrokPage() {
       <Detail1 description={model.description} packages={model.package} />
 
       <div className="mt-24 sm:mt-48 flex flex-wrap justify-between px-4">
-        <div className="w-full sm:w-1/4 pr-2 md:pr-24">
+        <div className="w-full sm:w-1/4 pr-2 md:pr-12 lg:pr-24">
           {model && <Image src={model.images[3].src} alt="picture 4" />}
           <div className="flex justify-between items-center">
             {model && <h4 className='text-sm'>{model.images[3].detail}</h4>}
-            <span className='text-sm'>{model.tag}</span>
+            <span className='text-xs'>{model.tag}</span>
           </div>
         </div>
         <div className="w-full sm:w-3/4 pl-2 md:pl-24 mt-48">
           {model && <Image src={model.images[2].src} alt="picture 3" />}
           <div className="flex justify-between items-center">
             {model && <h4 className='text-sm'>{model.images[2].detail}</h4>}
-            <span className='text-sm'>{model.tag}</span>
+            <span className='text-xs'>{model.tag}</span>
           </div>
         </div>
       </div>
 
-      <div className="mt-24 sm:mt-48 px-4">
+      <div className="my-24 sm:my-48 px-4">
         <div className="w-full sm:w-3/4 mx-auto">
           {model && <Image src={model.images[4].src} alt="picture 5" />}
           <div className="flex justify-between items-center">
             {model && <h4 className='text-sm'>{model.images[4].detail}</h4>}
-            <span className='text-sm'>{model.tag}</span>
+            <span className='text-xs'>{model.tag}</span>
           </div>
         </div>
       </div>

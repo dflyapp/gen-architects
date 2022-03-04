@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 import gsap from 'gsap'
 
+import Image from 'components/Image'
 import { Model } from './Model'
 
 export default function Sliders() {
@@ -41,7 +41,7 @@ export default function Sliders() {
         {Model.map((e) => {
           return (
             <div
-              className="carousel-cell px-12"
+              className="carousel-cell px-0 sm:pr-12"
               key={e.id}
               onClick={(event) => {
                 console.log('i am click or drag: ', isDragging)

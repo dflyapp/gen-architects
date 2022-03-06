@@ -10,7 +10,6 @@ import Folder2Img2 from 'assets/img/2/2.jpg'
 import Folder2Img3 from 'assets/img/2/3.jpg'
 import Folder2Img4 from 'assets/img/2/4.jpg'
 import Folder2Img5 from 'assets/img/2/5.jpg'
-import Folder2Img6 from 'assets/img/2/6.jpg'
 
 import Folder3Img1 from 'assets/img/3/1.jpg'
 import Folder3Img2 from 'assets/img/3/2.jpg'
@@ -26,283 +25,181 @@ import Folder4Img4 from 'assets/img/4/4.jpg'
 import Folder4Img5 from 'assets/img/4/5.jpg'
 import Folder4Img6 from 'assets/img/4/6.jpg'
 
-import Folder5Img1 from 'assets/img/5/1.jpg'
-import Folder5Img2 from 'assets/img/5/2.jpg'
-import Folder5Img3 from 'assets/img/5/3.jpg'
-import Folder5Img4 from 'assets/img/5/4.jpg'
-import Folder5Img5 from 'assets/img/5/5.jpg'
-import Folder5Img6 from 'assets/img/5/6.jpg'
-
-import Folder6Img1 from 'assets/img/6/1.jpg'
-import Folder6Img2 from 'assets/img/6/2.jpg'
-import Folder6Img3 from 'assets/img/6/3.jpg'
-import Folder6Img4 from 'assets/img/6/4.jpg'
-import Folder6Img5 from 'assets/img/6/5.jpg'
-import Folder6Img6 from 'assets/img/6/6.jpg'
-
 import Cover1 from 'assets/img/cover1.jpg'
 import Cover2 from 'assets/img/cover2.jpg'
 import Cover3 from 'assets/img/cover3.jpg'
 import Cover4 from 'assets/img/cover4.jpg'
-import Cover5 from 'assets/img/cover5.jpg'
-import Cover6 from 'assets/img/cover6.jpg'
 
 export const Model = [
   {
     id: 1,
     name: '59 HOUSE',
     cover: Cover1,
-    category: 'Nhà ở',
-    tag: 'GEN 21—365',
+    coverdesc: 'Exterior perspective',
+    category: 'HOUSE',
+    tag: 'GEN 16—004',
     location: 'Gò Vấp, TP. Hồ Chí Minh',
     description:
-      'Nằm trong một con hẻm nhỏ tại Quận Gò Vấp gồm 3 tầng có diện tích 5mx8m, ngôi nhà 59 HOUSE quay về hướng Đông là một bất lợi cũng như thách thức cho đội ngũ thiết kế',
+      'Quá trình nghiên cứu bối cảnh của công trình đã đưa chúng tối đến với hình thức kiến trúc nhiệt đới đặc trưng của vị trí khu đất. Chúng tôi đã lựa chọn mô tả lại hình thức 2 lớp tường với 1 lớp tường nhẹ bên ngoài bằng các bông gió bê tông để truyền tải vào hình thức mặt đứng của công trình.',
     package: [
-      'Phân Tích Ngoại Cảnh',
-      'Thiết Kế Ý Tưởng',
-      'Kế Hoạch Chi Tiết',
-      'Thiết Kế Kỹ Thuật',
-      'Giám Sát Thi Công',
+      'Site Analysis',
+      'Concept Design',
+      'Planning Process',
+      'Technical Design',
+      'On Site Assistance',
     ],
     images: [
       {
         src: Img1,
-        detail: 'Hành lang',
+        detail: 'unknown',
       },
       {
         src: Img2,
-        detail: 'Phòng khách',
+        detail: 'Living room',
       },
       {
         src: Img3,
-        detail: 'Phòng ăn và phòng khách ở trệt',
+        detail: 'Master bedroom',
       },
       {
         src: Img4,
-        detail: 'Lối ngoài hành lang',
+        detail: 'Kitchen space',
       },
       {
         src: Img5,
-        detail: 'Phòng ngủ và bàn làm việc',
+        detail: 'Sleeping and working space',
       },
       {
         src: Img6,
-        detail: 'Contemporary rural design',
+        detail: 'Facade perspective',
       },
     ],
   },
   {
     id: 2,
-    name: 'Glazed atrium interior',
+    name: 'PHAN THIET HOUSE',
     cover: Cover2,
-    category: 'Conversation',
-    tag: 'GEN 21—365',
-    location: 'Bleasby, Nottinghamshire',
+    coverdesc: 'Exterior perspective',
+    category: 'COUNTRY HOUSE',
+    tag: 'GEN 19—205',
+    location: 'PHAN THIET - VIETNAM',
     description:
-      'Using our specialisms in conservation and residential design we’ve secured a rare permission for a contemporary off-grid dwelling within the walled gardens of a Grade II listed Hall.',
+      'Bối cảnh đặc trưng của vùng đất nhiệt đới nhiều nắng và cát, chúng tôi đã đưa ra hình thức nhà ở miền quê đặc trưng với các chi tiết diềm mái dốc, hiên nhà, các ô gạch đặc rổng nhằm giảm thiểu tối đa bức xạ mặt trời đi vào công trình, kết hợp với các vật liệu hiện đại nhằm chống lại sự ăn mòn từ không khí biển.',
     package: [
-      'Phân Tích Ngoại Cảnh',
-      'Thiết Kế Ý Tưởng',
-      'Kế Hoạch Chi Tiết',
-      'Thiết Kế Kỹ Thuật',
-      'Giám Sát Thi Công',
+      'Site Analysis',
+      'Concept Design',
+      'Planning Process',
+      'Technical Design',
+      'On Site Assistance',
     ],
     images: [
       {
         src: Folder2Img1,
-        detail: 'Contemporary rural design',
+        detail: 'unknown',
       },
       {
         src: Folder2Img2,
-        detail: 'Contemporary rural design',
+        detail: 'Image from brick background',
       },
       {
         src: Folder2Img3,
-        detail: 'Contemporary rural design',
+        detail: 'Kitchen space',
       },
       {
         src: Folder2Img4,
-        detail: 'Contemporary rural design',
+        detail: 'Courtyard',
       },
       {
         src: Folder2Img5,
-        detail: 'Contemporary rural design',
-      },
-      {
-        src: Folder2Img6,
-        detail: 'Contemporary rural design',
+        detail: 'Exterior perspective',
       },
     ],
   },
   {
     id: 3,
-    name: 'Glazed atrium interior',
+    name: 'VINHOME CENTRAL PARK',
     cover: Cover3,
-    category: 'Conversation',
-    tag: 'PRB 20—038',
-    location: 'Bleasby, Nottinghamshire',
+    coverdesc: 'Exterior perspective',
+    category: 'APARTMENT',
+    tag: 'GEN 17—002',
+    location: 'BINH THANH - TPHCM',
     description:
-      'Using our specialisms in conservation and residential design we’ve secured a rare permission for a contemporary off-grid dwelling within the walled gardens of a Grade II listed Hall.',
+      'Phong cách nội thất Scandinavinan được đề xuất cho không gian nội thất của căn hộ. Trên tinh thần của sự tối giản - công năng - tiện dụng đã được truyền tải vào các không gian bên trong công trình.',
     package: [
-      'Phân Tích Ngoại Cảnh',
-      'Thiết Kế Ý Tưởng',
-      'Kế Hoạch Chi Tiết',
-      'Thiết Kế Kỹ Thuật',
-      'Giám Sát Thi Công',
+      'Site Analysis',
+      'Concept Design',
+      'Planning Process',
+      'Technical Design',
+      'On Site Assistance',
     ],
     images: [
       {
         src: Folder3Img1,
-        detail: 'Contemporary rural design',
+        detail: 'unknown',
       },
       {
         src: Folder3Img2,
-        detail: 'Contemporary rural design',
+        detail: 'Living room',
       },
       {
         src: Folder3Img3,
-        detail: 'Contemporary rural design',
+        detail: 'Living room and dining space',
       },
       {
         src: Folder3Img4,
-        detail: 'Contemporary rural design',
+        detail: 'Entrance',
       },
       {
         src: Folder3Img5,
-        detail: 'Contemporary rural design',
+        detail: 'Master bedroom',
       },
       {
         src: Folder3Img6,
-        detail: 'Contemporary rural design',
+        detail: 'Child\'s bedroom',
       },
     ],
   },
   {
     id: 4,
-    name: 'Glazed atrium interior',
+    name: 'TEN LUA HOUSE ',
     cover: Cover4,
-    category: 'Conversation',
-    tag: 'PRB 20—038',
-    location: 'Bleasby, Nottinghamshire',
+    coverdesc: 'Exterior perspective',
+    category: 'HOUSE',
+    tag: 'GEN 18—001',
+    location: 'BINH TAN - TPHCM',
     description:
-      'Using our specialisms in conservation and residential design we’ve secured a rare permission for a contemporary off-grid dwelling within the walled gardens of a Grade II listed Hall.',
+      'Giải pháp thiết kế đặc trưng của nhà phố Việt Nam, với những đường nét kỷ hà tối giản, ban công, logia và cây xanh bố trí phù hợp kết hợp xen kẻ. Tận dụng những vật dụng nội thất cũ nhưng mang nhiều giá trị ký ức, chúng tôi đã tái sử dụng chúng kết hợp cùng các không gian phù hợp.',
     package: [
-      'Phân Tích Ngoại Cảnh',
-      'Thiết Kế Ý Tưởng',
-      'Kế Hoạch Chi Tiết',
-      'Thiết Kế Kỹ Thuật',
-      'Giám Sát Thi Công',
+      'Site Analysis',
+      'Concept Design',
+      'Planning Process',
+      'Technical Design',
+      'On Site Assistance',
     ],
     images: [
       {
         src: Folder4Img1,
-        detail: 'Contemporary rural design',
+        detail: 'unknown',
       },
       {
         src: Folder4Img2,
-        detail: 'Contemporary rural design',
+        detail: 'Kitchen space',
       },
       {
         src: Folder4Img3,
-        detail: 'Contemporary rural design',
+        detail: 'Living room',
       },
       {
         src: Folder4Img4,
-        detail: 'Contemporary rural design',
+        detail: 'Kitchen space',
       },
       {
         src: Folder4Img5,
-        detail: 'Contemporary rural design',
+        detail: 'Master bedroom',
       },
       {
         src: Folder4Img6,
-        detail: 'Contemporary rural design',
-      },
-    ],
-  },
-  {
-    id: 5,
-    name: 'Glazed atrium interior',
-    cover: Cover5,
-    category: 'Conversation',
-    tag: 'PRB 20—038',
-    location: 'Bleasby, Nottinghamshire',
-    description:
-      'Using our specialisms in conservation and residential design we’ve secured a rare permission for a contemporary off-grid dwelling within the walled gardens of a Grade II listed Hall.',
-    package: [
-      'Phân Tích Ngoại Cảnh',
-      'Thiết Kế Ý Tưởng',
-      'Kế Hoạch Chi Tiết',
-      'Thiết Kế Kỹ Thuật',
-      'Giám Sát Thi Công',
-    ],
-    images: [
-      {
-        src: Folder5Img1,
-        detail: '123',
-      },
-      {
-        src: Folder5Img2,
-        detail: 'sss',
-      },
-      {
-        src: Folder5Img3,
-        detail: 'Contemporary rural design',
-      },
-      {
-        src: Folder5Img4,
-        detail: 'Contemporary rural design',
-      },
-      {
-        src: Folder5Img5,
-        detail: 'Contemporary rural design',
-      },
-      {
-        src: Folder5Img6,
-        detail: 'Contemporary rural design',
-      },
-    ],
-  },
-  {
-    id: 6,
-    name: 'Glazed atrium interior',
-    cover: Cover6,
-    category: 'Conversation',
-    tag: 'PRB 20—038',
-    location: 'Bleasby, Nottinghamshire',
-    description:
-      'Using our specialisms in conservation and residential design we’ve secured a rare permission for a contemporary off-grid dwelling within the walled gardens of a Grade II listed Hall.',
-    package: [
-      'Phân Tích Ngoại Cảnh',
-      'Thiết Kế Ý Tưởng',
-      'Kế Hoạch Chi Tiết',
-      'Thiết Kế Kỹ Thuật',
-      'Giám Sát Thi Công',
-    ],
-    images: [
-      {
-        src: Folder6Img1,
-        detail: 'Contemporary rural design',
-      },
-      {
-        src: Folder6Img2,
-        detail: 'Contemporary rural design',
-      },
-      {
-        src: Folder6Img3,
-        detail: 'Contemporary rural design',
-      },
-      {
-        src: Folder6Img4,
-        detail: 'Contemporary rural design',
-      },
-      {
-        src: Folder6Img5,
-        detail: 'Contemporary rural design',
-      },
-      {
-        src: Folder6Img6,
-        detail: 'Contemporary rural design',
+        detail: 'Music room',
       },
     ],
   },

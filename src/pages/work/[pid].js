@@ -1,15 +1,22 @@
 import Link from 'next/link'
-import Image from 'components/Image'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
+import styled from 'styled-components'
 
 import LogoPicture from 'assets/svg/logo_picture.svg'
+import ArrowRight from 'assets/svg/arrow_right.svg'
 
+import Image from 'components/Image'
 import PackageInfo from 'components/PackageInfo'
 import Contact from 'components/Contact'
 import Footer from 'components/Footer'
 
 import { Model } from 'components/Model'
+
+const BigHeading = styled.h1`
+  font-size: 7vw;
+  line-height: 7vw;
+`
 
 export default function WrokPage() {
   const router = useRouter()
@@ -66,13 +73,13 @@ export default function WrokPage() {
           {model && <Image src={model.images[0].src} alt="picture 1" />}
         </div>
         <div className="flex justify-center items-center w-full relative">
-          <div className="hidden sm:block absolute left-4 top-4">
-            <Image src={LogoPicture} alt="logo" />
+          <div className="absolute left-4 top-4">
+            <Image src={ArrowRight} alt="logo" />
           </div>
 
           <div className="text-center">
-            <h1 className="text-5xl font-bold">{model.name}</h1>
-            <p>{model.location}</p>
+            <BigHeading>{model.name}</BigHeading>
+            <p className='mt-8 text-2xl'>{model.location}</p>
           </div>
         </div>
       </div>
@@ -112,6 +119,16 @@ export default function WrokPage() {
           </div>
         </div>
       </div>
+
+      {model && model.images[5] && <div className="my-24 sm:my-48 px-4">
+        <div className="w-full sm:w-3/4 mx-auto">
+          {model && <Image src={model.images[5].src} alt="picture 5" />}
+          <div className="flex justify-between items-center">
+            {model && <h4 className="text-sm">{model.images[5].detail}</h4>}
+            <span className="text-xs">{model.tag}</span>
+          </div>
+        </div>
+      </div>}
 
       <Contact />
 

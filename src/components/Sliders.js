@@ -7,10 +7,11 @@ import { Model } from './Model'
 
 export default function Sliders() {
   const router = useRouter()
+  const mainCarousel = useRef()
+
   useEffect(async () => {
     const Flickity = await import('flickity/dist/flickity.pkgd')
-    const elem = document.querySelector('.main-carousel')
-    const flkty = new Flickity.default(elem, {
+    const flkty = new Flickity.default(mainCarousel.current, {
       cellAlign: 'left',
       contain: true,
       height: '160px',
@@ -27,7 +28,7 @@ export default function Sliders() {
     flkty.on('pointerMove', function () {
       setIsDragging(true)
     })
-  }, [])
+  }, [mainCarousel.current])
 
   const belowText = useRef()
   const [isDragging, setIsDragging] = useState(false)
@@ -37,7 +38,7 @@ export default function Sliders() {
 
   return (
     <div className="mt-8 sliders-wrapper">
-      <div className="main-carousel">
+      <div className="main-carousel" ref={mainCarousel}>
         {Model.map((e) => {
           return (
             <div
@@ -62,14 +63,14 @@ export default function Sliders() {
                   alt="cover image"
                 />
                 <span
-                  className="absolute -right-14 top-0 text-sm"
+                  className="absolute -right-14 top-8 text-sm"
                   style={{ transform: 'rotate(90deg)' }}
                 >
                   {e.tag}
                 </span>
               </div>
-              <div className="flex justify-between items-center">
-                <h4 className="text-md font-light">{e.name}</h4>
+              <div className="flex justify-between items-end">
+                <h4 className="text-md font-normal">{e.name}</h4>
                 <h5 className="text-sm">{e.category}</h5>
               </div>
             </div>

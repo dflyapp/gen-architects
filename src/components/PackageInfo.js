@@ -1,8 +1,9 @@
 import styled from 'styled-components'
-import Image from 'next/image'
+import Image from 'components/Image'
 
-const PackageName = styled.h4`
+const Description = styled.h4`
   color: white;
+  line-height: 3.5rem;
 `
 
 const SmallSpan = styled.span`
@@ -12,7 +13,7 @@ const SmallSpan = styled.span`
 
 export default function PackageInfo({ description, packages, img, tag }) {
   return (
-    <div className="mt-8 flex flex-wrap justify-between items-end bg-gray-800 py-24">
+    <div className="mt-8 flex flex-wrap justify-between items-end bg-gray-900 py-48">
       <div className="w-full sm:w-1/4 px-4 md:px-8 lg:px-24">
         <div className="flex justify-between items-center mb-2">
           <SmallSpan>{img.detail}</SmallSpan>
@@ -22,9 +23,9 @@ export default function PackageInfo({ description, packages, img, tag }) {
       </div>
       <div className="w-full sm:w-3/4 px-12">
         {description && (
-          <h1 className="text-xl sm:text-2xl text-white mb-24 font-light">
+          <Description className="text-xl sm:text-5xl text-white mb-24 font-normal leading-12">
             {description}
-          </h1>
+          </Description>
         )}
         {packages &&
           packages.map((ele, index) => {
@@ -34,9 +35,9 @@ export default function PackageInfo({ description, packages, img, tag }) {
                 className="border-t border-white text-white p-4 flex items-top"
               >
                 <sub className="mr-2">{`0${index + 1}`}</sub>
-                <PackageName className="text-sm sm:text-4xl font-light">
+                <h4 className="text-sm sm:text-xl font-light">
                   {ele}
-                </PackageName>
+                </h4>
               </div>
             )
           })}

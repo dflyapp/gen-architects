@@ -2,8 +2,8 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import Head from 'next/head'
 
-import LogoPicture from 'assets/svg/logo_picture.svg'
 import ArrowRight from 'assets/svg/arrow_right.svg'
 
 import Image from 'components/Image'
@@ -18,7 +18,7 @@ const BigHeading = styled.h1`
   line-height: 7vw;
 `
 
-export default function WrokPage() {
+export default function WorkPage() {
   const router = useRouter()
   const { pid } = router.query
   const [model, setModel] = useState(null)
@@ -33,6 +33,11 @@ export default function WrokPage() {
 
   return (
     <>
+      <Head>
+        <title>{model.name}</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+
       <header className="flex justify-between p-8">
         <Link href="/">
           <div className="flex flex-wrap items-center">
@@ -79,7 +84,7 @@ export default function WrokPage() {
 
           <div className="text-center">
             <BigHeading>{model.name}</BigHeading>
-            <p className='mt-8 text-2xl'>{model.location}</p>
+            <p className="mt-8 text-2xl">{model.location}</p>
           </div>
         </div>
       </div>
@@ -120,15 +125,17 @@ export default function WrokPage() {
         </div>
       </div>
 
-      {model && model.images[5] && <div className="my-24 sm:my-48 px-4">
-        <div className="w-full sm:w-3/4 mx-auto">
-          {model && <Image src={model.images[5].src} alt="picture 5" />}
-          <div className="flex justify-between items-center">
-            {model && <h4 className="text-sm">{model.images[5].detail}</h4>}
-            <span className="text-xs">{model.tag}</span>
+      {model && model.images[5] && (
+        <div className="my-24 sm:my-48 px-4">
+          <div className="w-full sm:w-3/4 mx-auto">
+            {model && <Image src={model.images[5].src} alt="picture 5" />}
+            <div className="flex justify-between items-center">
+              {model && <h4 className="text-sm">{model.images[5].detail}</h4>}
+              <span className="text-xs">{model.tag}</span>
+            </div>
           </div>
         </div>
-      </div>}
+      )}
 
       <Contact />
 

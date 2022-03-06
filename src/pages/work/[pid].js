@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 
 import LogoPicture from 'assets/svg/logo_picture.svg'
 
-import Detail1 from 'components/Detail1'
+import PackageInfo from 'components/PackageInfo'
 import Contact from 'components/Contact'
 import Footer from 'components/Footer'
 
@@ -14,7 +14,6 @@ import { Model } from 'components/Model'
 export default function WrokPage() {
   const router = useRouter()
   const { pid } = router.query
-  console.log(Model[pid - 1], pid)
   const [model, setModel] = useState(null)
 
   useEffect(() => {
@@ -62,8 +61,8 @@ export default function WrokPage() {
         <hr />
       </div>
 
-      <div className="mt-8 flex">
-        <div className="hidden sm:block bg-gray8" style={{ width: '800px', height: '700px' }}>
+      <div className="mt-8 flex h-screen overflow-hidden">
+        <div className="hidden sm:block bg-gray8 w-full sm:w-3/4">
           {model && <Image src={model.images[0].src} alt="picture 1" />}
         </div>
         <div className="flex justify-center items-center w-full relative">
@@ -78,7 +77,7 @@ export default function WrokPage() {
         </div>
       </div>
 
-      <Detail1 description={model.description} packages={model.package} />
+      <PackageInfo description={model.description} packages={model.package} />
 
       <div className="mt-24 sm:mt-48 flex flex-wrap justify-between px-4">
         <div className="w-full sm:w-1/4 pr-2 md:pr-12 lg:pr-24">

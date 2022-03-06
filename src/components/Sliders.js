@@ -41,7 +41,7 @@ export default function Sliders() {
         {Model.map((e) => {
           return (
             <div
-              className="carousel-cell px-0 sm:pr-12"
+              className="carousel-cell mx-8 px-0 sm:pr-12"
               key={e.id}
               onClick={(event) => {
                 console.log('i am click or drag: ', isDragging)

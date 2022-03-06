@@ -87,7 +87,7 @@ export const Model = [
       },
       {
         src: Img6,
-        detail: 'Contemporary rural design',
+        detail: 'Nhìn từ phía ngoài vào',
       },
     ],
   },

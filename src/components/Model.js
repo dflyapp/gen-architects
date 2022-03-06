@@ -52,7 +52,7 @@ export const Model = [
     id: 1,
     name: '59 HOUSE',
     cover: Cover1,
-    category: 'Nhà ở',
+    category: 'Residential',
     tag: 'GEN 21—365',
     location: 'Gò Vấp, TP. Hồ Chí Minh',
     description:

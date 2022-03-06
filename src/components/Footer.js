@@ -12,7 +12,7 @@ export default function Footer() {
               </div>
               <div className="ml-0 md:ml-12 w-full md:w-8/12 order-2 md:order-2 p-4 md:p-0 md:px-3 mb-18 md:mb-0">
                 <span className="block leading-tight text-xs md:text-sm uppercase mb-1 md:mb-3 invert-select">
-                  Dự án khác
+                  More projects
                 </span>
                 <div></div>
                 <div>
@@ -77,7 +77,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               href="/privacy"
             >
-              Bảo mật
+              Privacy
             </a>
           </li>
           <li className="ml-auto block border-l border-black invert-select">

@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="w-full flex flex-wrap">
           <div className="w-full md:w-10/12 ml-auto">
             <div className="flex flex-wrap items-end md:-mx-3 md:pl-6">
-              <div className="w-full md:w-auto order-1 md:order-1 md:px-3 overflow-hidden mb-16 md:mb-0 flex justify-between">
+              <div className="w-full md:w-auto order-1 md:order-1 md:px-3 overflow-hidden mt-32 md:mt-0 mb-16 md:mb-0 flex justify-between">
                 <img src={LogoPicture.src} alt="logo" style={{ width: 100, height: 'auto' }} className="mx-auto" />
               </div>
               <div className="ml-0 md:ml-12 w-full md:w-8/12 order-2 md:order-2 p-4 md:p-0 md:px-3 mb-18 md:mb-0">
@@ -65,7 +65,7 @@ export default function Footer() {
       >
         <ul className="flex flex-wrap border-t border-black border-b">
           <li className="text-sm lg:text-lg xl:text-xl py-2 md:py-3 pr-2 md:pr-3 lg:pr-4 xl:pr-5 block xl:border-r border-black hidden md:block invert-select">
-            Kiến trúc + Tư vấn
+            GEN Architects
           </li>
           <li className="text-sm lg:text-lg xl:text-xl py-2 md:py-3 pr-2 lg:px-3 lg:px-4 xl:px-5 xl:pr-6 hidden xl:block invert-select">
             © 2022
@@ -124,7 +124,7 @@ export default function Footer() {
         </ul>
         <ul className="flex flex-wrap border-b border-black md:hidden">
           <li className="text-sm md:text-lg py-2 block pr-12 block invert-select">
-            Kiến trúc + Tư vấn
+            GEN Architects
           </li>
         </ul>
       </div>

@@ -71,27 +71,34 @@ export default function WrokPage() {
           </div>
 
           <div className="text-center">
-            <h1 className="text-5xl">{model.name}</h1>
+            <h1 className="text-5xl font-bold">{model.name}</h1>
             <p>{model.location}</p>
           </div>
         </div>
       </div>
 
-      <PackageInfo description={model.description} packages={model.package} />
+      {model && (
+        <PackageInfo
+          description={model.description}
+          packages={model.package}
+          img={model.images[1]}
+          tag={model.tag}
+        />
+      )}
 
       <div className="mt-24 sm:mt-48 flex flex-wrap justify-between px-4">
         <div className="w-full sm:w-1/4 pr-2 md:pr-12 lg:pr-24">
           {model && <Image src={model.images[3].src} alt="picture 4" />}
           <div className="flex justify-between items-center">
-            {model && <h4 className='text-sm'>{model.images[3].detail}</h4>}
-            <span className='text-xs'>{model.tag}</span>
+            {model && <h4 className="text-sm">{model.images[3].detail}</h4>}
+            <span className="text-xs">{model.tag}</span>
           </div>
         </div>
         <div className="w-full sm:w-3/4 pl-2 md:pl-24 mt-48">
           {model && <Image src={model.images[2].src} alt="picture 3" />}
           <div className="flex justify-between items-center">
-            {model && <h4 className='text-sm'>{model.images[2].detail}</h4>}
-            <span className='text-xs'>{model.tag}</span>
+            {model && <h4 className="text-sm">{model.images[2].detail}</h4>}
+            <span className="text-xs">{model.tag}</span>
           </div>
         </div>
       </div>
@@ -100,8 +107,8 @@ export default function WrokPage() {
         <div className="w-full sm:w-3/4 mx-auto">
           {model && <Image src={model.images[4].src} alt="picture 5" />}
           <div className="flex justify-between items-center">
-            {model && <h4 className='text-sm'>{model.images[4].detail}</h4>}
-            <span className='text-xs'>{model.tag}</span>
+            {model && <h4 className="text-sm">{model.images[4].detail}</h4>}
+            <span className="text-xs">{model.tag}</span>
           </div>
         </div>
       </div>

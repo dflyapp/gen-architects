@@ -120,7 +120,7 @@ export default function WrokPage() {
         </div>
       </div>
 
-      <div className="my-24 sm:my-48 px-4">
+      {model && model.images[5] && <div className="my-24 sm:my-48 px-4">
         <div className="w-full sm:w-3/4 mx-auto">
           {model && <Image src={model.images[5].src} alt="picture 5" />}
           <div className="flex justify-between items-center">
@@ -128,7 +128,7 @@ export default function WrokPage() {
             <span className="text-xs">{model.tag}</span>
           </div>
         </div>
-      </div>
+      </div>}
 
       <Contact />
 

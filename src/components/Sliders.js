@@ -63,14 +63,14 @@ export default function Sliders() {
                   alt="cover image"
                 />
                 <span
-                  className="absolute -right-14 top-0 text-sm"
+                  className="absolute -right-14 top-8 text-sm"
                   style={{ transform: 'rotate(90deg)' }}
                 >
                   {e.tag}
                 </span>
               </div>
-              <div className="flex justify-between items-center">
-                <h4 className="text-md font-light">{e.name}</h4>
+              <div className="flex justify-between items-end">
+                <h4 className="text-md font-normal">{e.name}</h4>
                 <h5 className="text-sm">{e.category}</h5>
               </div>
             </div>

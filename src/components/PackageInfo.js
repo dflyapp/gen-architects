@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Image from 'next/image'
+import Image from 'components/Image'
 
 const PackageName = styled.h4`
   color: white;

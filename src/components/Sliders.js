@@ -7,10 +7,11 @@ import { Model } from './Model'
 
 export default function Sliders() {
   const router = useRouter()
+  const mainCarousel = useRef()
+
   useEffect(async () => {
     const Flickity = await import('flickity/dist/flickity.pkgd')
-    const elem = document.querySelector('.main-carousel')
-    const flkty = new Flickity.default(elem, {
+    const flkty = new Flickity.default(mainCarousel.current, {
       cellAlign: 'left',
       contain: true,
       height: '160px',
@@ -27,7 +28,7 @@ export default function Sliders() {
     flkty.on('pointerMove', function () {
       setIsDragging(true)
     })
-  }, [])
+  }, [mainCarousel.current])
 
   const belowText = useRef()
   const [isDragging, setIsDragging] = useState(false)
@@ -37,7 +38,7 @@ export default function Sliders() {
 
   return (
     <div className="mt-8 sliders-wrapper">
-      <div className="main-carousel">
+      <div className="main-carousel" ref={mainCarousel}>
         {Model.map((e) => {
           return (
             <div

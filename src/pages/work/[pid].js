@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import Image from 'components/Image'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
 import LogoPicture from 'assets/svg/logo_picture.svg'
 
+import Image from 'components/Image'
 import PackageInfo from 'components/PackageInfo'
 import Contact from 'components/Contact'
 import Footer from 'components/Footer'

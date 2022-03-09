@@ -3,7 +3,6 @@ import { useRef, useEffect } from 'react'
 import Head from 'next/head'
 
 import LogoPicture from 'assets/svg/logo_picture.svg'
-import LogoText from 'assets/svg/logo_text.svg'
 
 import Sliders from 'components/Sliders'
 

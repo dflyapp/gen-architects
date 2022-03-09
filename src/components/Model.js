@@ -40,7 +40,7 @@ export const Model = [
     tag: 'GEN 16—004',
     location: 'Gò Vấp, TP. Hồ Chí Minh',
     description:
-      'Quá trình nghiên cứu bối cảnh của công trình đã đưa chúng tối đến với hình thức kiến trúc nhiệt đới đặc trưng của vị trí khu đất. Chúng tôi đã lựa chọn mô tả lại hình thức 2 lớp tường với 1 lớp tường nhẹ bên ngoài bằng các bông gió bê tông để truyền tải vào hình thức mặt đứng của công trình.',
+      'The process of context research has brought us to the typical tropical architectural form of the site location. We have chosen to demonstrate the form of two layers of walls with a light outer wall made of ball breeze concrete blocks and carry to the shape of the facade.',
     package: [
       'Site Analysis',
       'Concept Design',
@@ -84,7 +84,7 @@ export const Model = [
     tag: 'GEN 19—205',
     location: 'PHAN THIET - VIETNAM',
     description:
-      'Bối cảnh đặc trưng của vùng đất nhiệt đới nhiều nắng và cát, chúng tôi đã đưa ra hình thức nhà ở miền quê đặc trưng với các chi tiết diềm mái dốc, hiên nhà, các ô gạch đặc rổng nhằm giảm thiểu tối đa bức xạ mặt trời đi vào công trình, kết hợp với các vật liệu hiện đại nhằm chống lại sự ăn mòn từ không khí biển.',
+      'In the mood of a sunny and sandy tropical air, the concept came up with a traditional country house form with details of a sloped roof, porch, and solid and hollow bricks to minimize the solar radiation entering the building, and combine that with modern materials to resist corrosion from the sea air.',
     package: [
       'Site Analysis',
       'Concept Design',
@@ -124,7 +124,7 @@ export const Model = [
     tag: 'GEN 17—002',
     location: 'BINH THANH - TPHCM',
     description:
-      'Phong cách nội thất Scandinavinan được đề xuất cho không gian nội thất của căn hộ. Trên tinh thần của sự tối giản - công năng - tiện dụng đã được truyền tải vào các không gian bên trong công trình.',
+      'For interior space, designers proposed the style of the North of Europe - Scandinavian. In the spirit of minimalism - functionality - comfort has been conveyed into the spaces inside the building.',
     package: [
       'Site Analysis',
       'Concept Design',
@@ -168,7 +168,7 @@ export const Model = [
     tag: 'GEN 18—001',
     location: 'BINH TAN - TPHCM',
     description:
-      'Giải pháp thiết kế đặc trưng của nhà phố Việt Nam, với những đường nét kỷ hà tối giản, ban công, logia và cây xanh bố trí phù hợp kết hợp xen kẻ. Tận dụng những vật dụng nội thất cũ nhưng mang nhiều giá trị ký ức, chúng tôi đã tái sử dụng chúng kết hợp cùng các không gian phù hợp.',
+      'Typical design solution of Vietnamese townhouses, with minimalist modern lines, balconies, loggias, and trees came between, taking advantage of old furniture items but carrying many memories have reused them to combine with suitable spaces.',
     package: [
       'Site Analysis',
       'Concept Design',

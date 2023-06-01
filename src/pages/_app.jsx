@@ -6,9 +6,12 @@ import 'flickity/dist/flickity.min.css'
 import { useEffect } from 'react'
 
 function MyApp({ Component, pageProps }) {
-  useEffect(async () => {
-    await import('jquery')
-    await import('flickity/dist/flickity.pkgd')
+  useEffect(() => {
+    async function call() {
+      await import('jquery')
+      await import('flickity/dist/flickity.pkgd')
+    }
+    call()
   }, [])
   return (
     <>

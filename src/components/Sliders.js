@@ -9,25 +9,28 @@ export default function Sliders() {
   const router = useRouter()
   const mainCarousel = useRef()
 
-  useEffect(async () => {
-    const Flickity = await import('flickity/dist/flickity.pkgd')
-    const flkty = new Flickity.default(mainCarousel.current, {
-      cellAlign: 'left',
-      contain: true,
-      height: '160px',
-      freeScroll: true,
-      wrapAround: true,
-      prevNextButtons: false,
-      pageDots: false,
-    })
+  useEffect(() => {
+    async function call() {
+      const Flickity = await import('flickity/dist/flickity.pkgd')
+      const flkty = new Flickity.default(mainCarousel.current, {
+        cellAlign: 'left',
+        contain: true,
+        height: '160px',
+        freeScroll: true,
+        wrapAround: true,
+        prevNextButtons: false,
+        pageDots: false,
+      })
 
-    flkty.on('pointerDown', function () {
-      setIsDragging(false)
-    })
+      flkty.on('pointerDown', function () {
+        setIsDragging(false)
+      })
 
-    flkty.on('pointerMove', function () {
-      setIsDragging(true)
-    })
+      flkty.on('pointerMove', function () {
+        setIsDragging(true)
+      })
+    }
+    call()
   }, [mainCarousel.current])
 
   const belowText = useRef()

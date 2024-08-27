@@ -4,7 +4,7 @@ import Head from 'next/head'
 
 import LogoPicture from 'assets/svg/logo_picture.svg'
 
-import Sliders from 'components/Sliders'
+import Carousel from 'components/Carousel'
 
 export default function Home() {
   const gallery = useRef()
@@ -48,14 +48,7 @@ export default function Home() {
               alt="gen"
             />
           </div>
-
-          <Sliders />
-
-          {/* <img
-            style={{ width: 200, height: 'auto' }}
-            src={LogoText.src}
-            alt="gen"
-          /> */}
+          <Carousel />
         </section>
       </div>
     </div>

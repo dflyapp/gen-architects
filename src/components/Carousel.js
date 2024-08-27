@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 import { Model } from './Model'
+import Link from 'next/link';
 
 // getting from https://github.com/Popmotion/popmotion/blob/master/packages/popmotion/src/utils/wrap.ts
 export const wrap = (min, max, v) => {
@@ -60,7 +61,7 @@ const App = () => {
   return (
     <>
       <div className="flex flex-col items-center mx-8">
-        <div className="relative w-[350px] md:w-[800px] h-[500px] overflow-hidden">
+        <div className="relative w-full md:w-[800px] h-[300px] md:h-[500px] overflow-hidden">
           <AnimatePresence initial={false} custom={direction}>
             <motion.div
               key={imageCount}
@@ -82,9 +83,12 @@ const App = () => {
           </AnimatePresence>
         </div>
 
-        <div className='flex gap-x-4 my-4'>
-          <button onClick={() => swipeToImage(-1)}>PREV</button>
-          <button onClick={() => swipeToImage(1)}>NEXT</button>
+        <p className='text-center text-4xl mt-2'>{Model[activeImageIndex].name}</p>
+
+        <div className='w-full justify-center flex gap-x-4 my-4'>
+          <button onClick={() => swipeToImage(-1)}>←</button>
+          <Link className='hover:opacity-70 text-prbred underline' href={`/work/${activeImageIndex+1}`}>view project</Link>
+          <button onClick={() => swipeToImage(1)}>→</button>
         </div>
       </div>
       <div className="flex justify-center gap-x-2">
@@ -95,8 +99,8 @@ const App = () => {
             className="relative h-[120px] w-[90px]"
           >
             <img
-              className={`absolute top-0 left-0 h-full w-full object-cover ${
-                image.id === activeImageIndex + 1 ? 'blur-sm brightness-50' : null
+              className={`absolute top-0 left-0 h-12 md:h-full w-full object-cover ${
+                image.id === activeImageIndex + 1 ? 'border-4 border-prbred' : null
               }`}
               src={image.cover.src}
               alt="Cover"

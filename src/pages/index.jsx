@@ -39,7 +39,7 @@ export default function Home() {
           <hr />
         </div>
 
-        <section className="flex flex-col h-full justify-between p-8 pb-48">
+        <section className="flex flex-col gap-y-2 h-full justify-between p-8 pb-48">
           <div>
             <img
               ref={logoPic}

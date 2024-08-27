@@ -23,7 +23,7 @@ export default function Home() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <div className="w-screen h-screen relative overflow-hidden">
+      <div className="w-screen h-screen relative overflow-x-hidden">
         <header className="flex justify-between p-8">
           <div ref={gallery} className="flex items-center">
             <a className="text-2xl">Gallery</a>

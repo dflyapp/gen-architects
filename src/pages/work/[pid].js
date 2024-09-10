@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
@@ -5,7 +6,6 @@ import styled from 'styled-components'
 import Head from 'next/head'
 
 import ArrowRight from 'assets/svg/arrow_right.svg'
-
 import Image from 'components/Image'
 import PackageInfo from 'components/PackageInfo'
 import Contact from 'components/Contact'
@@ -40,7 +40,12 @@ export default function WorkPage() {
 
       <header className="flex justify-between p-8">
         <Link href="/">
-          <div className="flex flex-wrap items-center">
+          <motion.div
+            initial={{ opacity: 0, x: 10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-wrap items-center"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-6"
@@ -62,7 +67,7 @@ export default function WorkPage() {
             <span className="text-2xl block ml-3 cursor-pointer">
               All Projects
             </span>
-          </div>
+          </motion.div>
         </Link>
         <div>
           <a className="text-2xl">Menu</a>

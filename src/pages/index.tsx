@@ -1,21 +1,10 @@
-import { gsap } from 'gsap'
-import { useRef, useEffect } from 'react'
+import { motion } from 'framer-motion'
+
 import Head from 'next/head'
-
 import LogoPicture from 'assets/svg/logo_picture.svg'
-
 import Carousel from 'components/Carousel'
 
 export default function Home() {
-  const gallery = useRef()
-  const logoPic = useRef()
-
-  useEffect(() => {
-    gsap.fromTo(gallery.current, { y: 50 }, { duration: 0.5, y: 0 })
-    gsap.fromTo(logoPic.current, { y: -50 }, { duration: 0.5, y: 0 })
-    // gsap.fromTo(element, {x: -100}, {duration: 1, x: 100});
-  })
-
   return (
     <div>
       <Head>
@@ -25,11 +14,16 @@ export default function Home() {
 
       <div className="w-screen h-screen relative overflow-x-hidden">
         <header className="flex justify-between p-8">
-          <div ref={gallery} className="flex items-center">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex items-center"
+          >
             <a className="text-2xl">Gallery</a>
             <span className="mx-2">/</span>
             <a className="text-2xl opacity-60">Index</a>
-          </div>
+          </motion.div>
           <div>
             <a className="text-2xl">Menu</a>
           </div>
@@ -40,14 +34,17 @@ export default function Home() {
         </div>
 
         <section className="flex flex-col gap-y-2 h-full justify-between p-8 pb-48">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <img
-              ref={logoPic}
               style={{ width: 80, height: 'auto' }}
               src={LogoPicture.src}
               alt="gen"
             />
-          </div>
+          </motion.div>
           <Carousel />
         </section>
       </div>

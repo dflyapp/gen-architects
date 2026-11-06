@@ -1,3 +1,6 @@
 # Local Worker runtime variables/secrets for `wrangler dev`.
-# This app currently has no runtime secrets, so this file is optional.
-# Copy to `.dev.vars` if you add any. Do not commit `.dev.vars`.
+# Copy this file to `.dev.vars` and change the values.
+# Do not commit `.dev.vars`.
+CMS_ADMIN_USER=admin
+CMS_ADMIN_PASSWORD=change-me-locally
+CMS_SESSION_SECRET=change-me-to-a-long-random-value

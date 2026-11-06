@@ -4,7 +4,7 @@
 # This script is idempotent:
 #   - creates only missing resources
 #   - appends missing bindings to wrangler.toml
-#   - verifies existing bindings point at the expected resources
+#   - verifies existing bindings and reconciles the D1 ID for the named database
 #   - never deletes or recreates anything
 #
 # Usage:
@@ -224,7 +224,7 @@ function quote(value) {
   return JSON.stringify(value);
 }
 
-function upsert(source, table, binding, values) {
+function upsert(source, table, binding, values, replaceKeys = new Set()) {
   const { lines, blocks } = parseBlocks(source, table);
   const block = blocks.find((item) => valueOf(item, "binding") === binding);
 
@@ -240,40 +240,62 @@ function upsert(source, table, binding, values) {
   }
 
   const missing = [];
+  const replacements = new Map();
+
   for (const [key, value] of Object.entries(values)) {
     const existing = valueOf(block, key);
     if (existing === null) {
       missing.push(key + " = " + quote(value));
     } else if (existing !== value) {
-      throw new Error(
-        "[[" + table + "]] binding " + binding + " has " + key + " = " +
-          JSON.stringify(existing) + ", expected " + JSON.stringify(value) +
-          ". Fix " + configPath + " manually.",
-      );
+      if (replaceKeys.has(key)) {
+        replacements.set(key, key + " = " + quote(value));
+      } else {
+        throw new Error(
+          "[[" + table + "]] binding " + binding + " has " + key + " = " +
+            JSON.stringify(existing) + ", expected " + JSON.stringify(value) +
+            ". Fix " + configPath + " manually.",
+        );
+      }
     }
   }
 
-  if (missing.length === 0) {
+  for (const line of block.lines) {
+    const match = line.text.match(/^\s*([A-Za-z0-9_]+)\s*=/);
+    if (match && replacements.has(match[1])) {
+      lines[line.index] = replacements.get(match[1]);
+    }
+  }
+
+  if (missing.length === 0 && replacements.size === 0) {
     console.log("verified [[" + table + "]] binding " + binding);
     return source;
   }
 
-  let insertAt = block.end === null ? lines.length : block.end;
-  while (insertAt > block.start + 1 && lines[insertAt - 1].trim() === "") {
-    insertAt -= 1;
+  if (missing.length > 0) {
+    let insertAt = block.end === null ? lines.length : block.end;
+    while (insertAt > block.start + 1 && lines[insertAt - 1].trim() === "") {
+      insertAt -= 1;
+    }
+    lines.splice(insertAt, 0, ...missing);
   }
-  lines.splice(insertAt, 0, ...missing);
+
   console.log("updated [[" + table + "]] binding " + binding);
   return lines.join("\n");
 }
 
 try {
-  text = upsert(text, "d1_databases", dbBinding, {
-    binding: dbBinding,
-    database_name: dbName,
-    database_id: dbId,
-    migrations_dir: migrationsDir,
-  });
+  text = upsert(
+    text,
+    "d1_databases",
+    dbBinding,
+    {
+      binding: dbBinding,
+      database_name: dbName,
+      database_id: dbId,
+      migrations_dir: migrationsDir,
+    },
+    new Set(["database_id"]),
+  );
   text = upsert(text, "r2_buckets", r2Binding, {
     binding: r2Binding,
     bucket_name: r2Name,
@@ -289,15 +311,10 @@ NODE
 # --- D1 ---------------------------------------------------------------------
 
 EXISTING_DB_ID="$(d1_id_for_name)" || die "Could not list D1 databases"
-CONFIGURED_DB_ID="$(config_value d1_databases "$DB_BINDING" database_id)"
 CONFIGURED_DB_NAME="$(config_value d1_databases "$DB_BINDING" database_name)"
 
 if [[ -n "$CONFIGURED_DB_NAME" && "$CONFIGURED_DB_NAME" != "$DB_NAME" ]]; then
   die "$CONFIG has D1 binding '$DB_BINDING' pointing at '$CONFIGURED_DB_NAME', expected '$DB_NAME'. Fix it manually."
-fi
-
-if [[ -n "$CONFIGURED_DB_ID" && -z "$EXISTING_DB_ID" ]]; then
-  die "$CONFIG references D1 database_id '$CONFIGURED_DB_ID', but no database named '$DB_NAME' exists in this account. Remove or fix the binding before provisioning."
 fi
 
 if [[ -z "$EXISTING_DB_ID" ]]; then

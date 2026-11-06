@@ -1,6 +1,11 @@
 import Carousel from '../components/Carousel'
+import type { Project } from '../data/model'
 
-export default function Home() {
+type HomeProps = {
+  projects: Project[]
+}
+
+export default function Home({ projects }: HomeProps) {
   return (
     <div>
       <div class="w-screen h-screen relative overflow-x-hidden">
@@ -33,7 +38,7 @@ export default function Home() {
               alt="gen"
             />
           </div>
-          <Carousel index={0} />
+          <Carousel index={0} projects={projects} />
         </section>
       </div>
     </div>

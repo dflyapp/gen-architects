@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1793980360007,
+      "tag": "0000_dapper_human_torch",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1793980361862,
+      "tag": "0001_seed_projects",
+      "breakpoints": true
+    }
+  ]
+}

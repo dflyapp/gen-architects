@@ -130,6 +130,3 @@ li {
   @apply h-auto;
 }
 
-button:hover {
-  background: transparent;
-}

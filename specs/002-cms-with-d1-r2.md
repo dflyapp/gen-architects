@@ -2,7 +2,9 @@
 
 ## Status
 
-Proposed — awaiting approval and Cloudflare resource provisioning.
+Implemented — D1 and R2 provisioned, migrations applied locally and remotely,
+and the CMS/public-site migration is complete. Production deployment is the
+remaining step.
 
 ## Goal
 
@@ -278,8 +280,10 @@ Worker runtime values are not read from `.env` directly. Use:
 - `.dev.vars` for local `wrangler dev` runtime secrets (gitignored).
 - `.dev.vars.example` as the committed template.
 - `wrangler secret put` or the Cloudflare dashboard for production secrets.
-- `.env` remains only for local Wrangler CLI credentials
-  (`CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`).
+- Wrangler CLI authentication defaults to the OAuth session from
+  `wrangler login`. For CI or non-interactive environments, set
+  `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`; a local `.env` file is
+  optional and gitignored.
 
 Required runtime values:
 

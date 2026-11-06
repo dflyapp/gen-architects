@@ -6,9 +6,10 @@ import PackageInfo from '../components/PackageInfo'
 
 type WorkProps = {
   project: Project
+  projects: Project[]
 }
 
-export default function Work({ project }: WorkProps) {
+export default function Work({ project, projects }: WorkProps) {
   const [hero, packageImage, third, fourth, fifth] = project.images
 
   return (
@@ -114,7 +115,7 @@ export default function Work({ project }: WorkProps) {
       )}
 
       <Contact />
-      <Footer />
+      <Footer projects={projects} />
     </>
   )
 }

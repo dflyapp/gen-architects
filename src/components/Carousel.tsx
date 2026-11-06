@@ -1,12 +1,23 @@
-import { projects, wrap } from '../data/model'
+import type { Project } from '../data/model'
+import { wrap } from '../data/model'
 import Image from './Image'
 
 type CarouselProps = {
   index: number
+  projects: Project[]
 }
 
-export default function Carousel({ index }: CarouselProps) {
-  const activeIndex = wrap(0, projects.length, index)
+export default function Carousel({ index, projects }: CarouselProps) {
+  if (projects.length === 0) {
+    return (
+      <div id="carousel" class="flex flex-col items-center mx-8">
+        <p class="text-center text-xl mt-2">No projects yet.</p>
+      </div>
+    )
+  }
+
+  const safeIndex = Number.isFinite(index) ? index : 0
+  const activeIndex = wrap(0, projects.length, safeIndex)
   const project = projects[activeIndex]
 
   return (
@@ -46,18 +57,18 @@ export default function Carousel({ index }: CarouselProps) {
       </div>
 
       <div class="flex justify-center gap-x-2">
-        {projects.map((item) => (
+        {projects.map((item, itemIndex) => (
           <button
             type="button"
             key={item.id}
-            hx-get={`/partials/carousel?index=${item.id - 1}`}
+            hx-get={`/partials/carousel?index=${itemIndex}`}
             hx-target="#carousel"
             hx-swap="outerHTML"
             class="relative h-[120px] w-[90px]"
           >
             <Image
               class={`absolute top-0 left-0 h-12 md:h-full w-full object-cover ${
-                item.id === activeIndex + 1 ? 'border-4 border-prbred' : ''
+                item.id === project.id ? 'border-4 border-prbred' : ''
               }`}
               src={item.cover}
               alt="Cover"

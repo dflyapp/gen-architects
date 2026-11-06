@@ -1,6 +1,10 @@
-import { projects } from '../data/model'
+import type { Project } from '../data/model'
 
-export default function Footer() {
+type FooterProps = {
+  projects: Project[]
+}
+
+export default function Footer({ projects }: FooterProps) {
   return (
     <section class="md:px-6 bg-prbred pt-6 md:pt-24 lg:pt-32 pb-32 md:pb-6">
       <div>

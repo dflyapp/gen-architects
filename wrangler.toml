@@ -2,9 +2,10 @@ name = "gen-architects"
 main = "src/worker.tsx"
 compatibility_date = "2024-12-01"
 
-# Custom domain. The genarchitechs.net zone must be active on this Cloudflare account.
+# Custom domain. The genarchitects.net zone must be active on this Cloudflare account.
 [[routes]]
-pattern = "genarchitechs.net"
+pattern = "genarchitects.net"
+zone_name = "genarchitects.net"
 custom_domain = true
 
 # Static files are staged into ./dist by `pnpm build:assets`.

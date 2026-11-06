@@ -28,13 +28,13 @@ pnpm start
 ## Cloudflare Workers
 
 The app deploys to Cloudflare Workers as `gen-architects` and is served at
-**https://genarchitechs.net**. Static files are staged into `dist/` and served
+**https://genarchitects.net**. Static files are staged into `dist/` and served
 through the Workers `ASSETS` binding; server-rendered routes are handled by
 `src/worker.tsx`.
 
-The custom domain is configured in `wrangler.toml` with `custom_domain = true`,
-so the `genarchitechs.net` zone must be active on the same Cloudflare account.
-DNS is provisioned automatically on deploy.
+The custom domain is configured in `wrangler.toml` with `custom_domain = true`
+and an explicit `zone_name`, so the `genarchitects.net` zone must be active on
+the same Cloudflare account. DNS is provisioned automatically on deploy.
 
 Validate the Worker bundle locally:
 

@@ -53,20 +53,21 @@ Deploy from your machine:
 
 ```bash
 cp .env.example .env   # then fill in the two values
-pnpm deploy
+pnpm run deploy        # passes extra args to wrangler, e.g. --env staging
 ```
 
-### Required GitHub Actions secrets
+`pnpm run deploy` runs `scripts/deploy.sh`, which loads `.env`, checks the
+credentials, builds the app, and runs `wrangler deploy`. Use `pnpm deploy:dry-run`
+to build and validate the bundle without publishing.
 
-Add these repository secrets under **Settings → Secrets and variables → Actions**:
+### Required credentials
 
-| Secret | Description |
+| Variable | Description |
 | --- | --- |
 | `CLOUDFLARE_API_TOKEN` | API token with the **Edit Cloudflare Workers** template/permissions |
 | `CLOUDFLARE_ACCOUNT_ID` | Your Cloudflare account ID |
 
-`.github/workflows/deploy.yml` builds the app and deploys on every push to
-`main`, or manually via **Run workflow**.
+Export them in your shell or put them in a git-ignored `.env` file.
 
 No runtime secrets are currently required. Add Worker runtime secrets with
 `wrangler secret put` if needed.

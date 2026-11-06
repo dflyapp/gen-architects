@@ -24,3 +24,13 @@ enabled = true
 destinations = ["genarchitects"]
 head_sampling_rate = 1
 persist = false
+
+[[d1_databases]]
+binding = "DB"
+database_name = "gen-architects-db"
+database_id = "46599ff7-3833-4c6c-9fa3-8da5507c80f1"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "IMAGES"
+bucket_name = "gen-architects-media"

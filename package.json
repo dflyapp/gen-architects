@@ -11,7 +11,8 @@
     "build:assets": "rm -rf dist && mkdir -p dist && cp -r public/. dist/ && cp -r src/assets dist/assets",
     "start": "tsx src/server.tsx",
     "preview": "pnpm build && wrangler dev",
-    "deploy": "pnpm build && wrangler deploy",
+    "deploy": "./scripts/deploy.sh",
+    "deploy:dry-run": "pnpm build && wrangler deploy --dry-run",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

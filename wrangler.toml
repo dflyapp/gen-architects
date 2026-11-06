@@ -14,3 +14,13 @@ custom_domain = true
 [assets]
 directory = "./dist"
 binding = "ASSETS"
+
+[observability.logs]
+enabled = true
+invocation_logs = true
+
+[observability.traces]
+enabled = true
+destinations = ["genarchitects"]
+head_sampling_rate = 1
+persist = false

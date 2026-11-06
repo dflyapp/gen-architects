@@ -1,0 +1,3 @@
+# Local Worker runtime variables/secrets for `wrangler dev`.
+# This app currently has no runtime secrets, so this file is optional.
+# Copy to `.dev.vars` if you add any. Do not commit `.dev.vars`.

@@ -1,0 +1,15 @@
+name = "gen-architects"
+main = "src/worker.tsx"
+compatibility_date = "2024-12-01"
+
+# Custom domain. The genarchitechs.net zone must be active on this Cloudflare account.
+[[routes]]
+pattern = "genarchitechs.net"
+custom_domain = true
+
+# Static files are staged into ./dist by `pnpm build:assets`.
+# Requests that match a file are served directly by Cloudflare; everything else
+# falls through to the Hono Worker in src/worker.tsx.
+[assets]
+directory = "./dist"
+binding = "ASSETS"

@@ -34,6 +34,7 @@ export default function Carousel({ index, projects }: CarouselProps) {
       <div class="w-full justify-center flex gap-x-4 my-4">
         <button
           type="button"
+          aria-label="Previous project"
           hx-get={`/partials/carousel?index=${activeIndex - 1}`}
           hx-target="#carousel"
           hx-swap="outerHTML"
@@ -48,6 +49,7 @@ export default function Carousel({ index, projects }: CarouselProps) {
         </a>
         <button
           type="button"
+          aria-label="Next project"
           hx-get={`/partials/carousel?index=${activeIndex + 1}`}
           hx-target="#carousel"
           hx-swap="outerHTML"
@@ -61,6 +63,7 @@ export default function Carousel({ index, projects }: CarouselProps) {
           <button
             type="button"
             key={item.id}
+            aria-label={item.name}
             hx-get={`/partials/carousel?index=${itemIndex}`}
             hx-target="#carousel"
             hx-swap="outerHTML"
@@ -71,7 +74,7 @@ export default function Carousel({ index, projects }: CarouselProps) {
                 item.id === project.id ? 'border-4 border-prbred' : ''
               }`}
               src={item.cover}
-              alt="Cover"
+              alt={item.name}
             />
           </button>
         ))}

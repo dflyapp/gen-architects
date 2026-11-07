@@ -22,7 +22,7 @@ export default function PackageInfo({
           <span class="text-white text-[0.7rem]">{img?.detail ?? ''}</span>
           <span class="text-white text-[0.7rem]">{tag}</span>
         </div>
-        <Image src={img?.src ?? PLACEHOLDER_COVER} alt="picture 4" />
+        <Image src={img?.src ?? PLACEHOLDER_COVER} alt={img?.detail || 'Project detail'} />
       </div>
       <div class="w-full sm:w-3/4 px-12">
         <h4 class="text-white leading-[3.5rem] text-xl sm:text-5xl mb-24 font-normal leading-12">

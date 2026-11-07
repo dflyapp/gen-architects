@@ -15,11 +15,12 @@ export default function Work({ project, projects }: WorkProps) {
   return (
     <>
       <header class="flex justify-between p-8">
-        <a
-          href="/"
-          class="flex flex-wrap items-center animate-slide-right"
-        >
-          <svg
+        <nav aria-label="Back to gallery">
+          <a
+            href="/"
+            class="flex flex-wrap items-center animate-slide-right"
+          >
+            <svg
             xmlns="http://www.w3.org/2000/svg"
             class="w-6"
             viewBox="0 0 27.197 23.217"
@@ -40,7 +41,8 @@ export default function Work({ project, projects }: WorkProps) {
           <span class="text-2xl block ml-3 cursor-pointer">
             All Projects
           </span>
-        </a>
+          </a>
+        </nav>
         <div>
           <a class="text-2xl" href="/">
             Menu
@@ -54,11 +56,11 @@ export default function Work({ project, projects }: WorkProps) {
 
       <div class="mt-8 flex h-screen overflow-hidden">
         <div class="hidden sm:block bg-gray8 w-full sm:w-3/4">
-          {hero && <Image src={hero.src} alt="picture 1" />}
+          {hero && <Image src={hero.src} alt={project.name} />}
         </div>
         <div class="flex justify-center items-center w-full relative">
           <div class="absolute left-4 top-4">
-            <Image src="/assets/svg/arrow_right.svg" alt="logo" />
+            <Image src="/assets/svg/arrow_right.svg" alt="" />
           </div>
 
           <div class="text-center">
@@ -77,14 +79,14 @@ export default function Work({ project, projects }: WorkProps) {
 
       <div class="mt-24 sm:mt-48 flex flex-wrap justify-between px-4">
         <div class="w-full sm:w-1/4 pr-2 md:pr-12 lg:pr-24">
-          {third && <Image src={third.src} alt="picture 4" />}
+          {third && <Image src={third.src} alt={third.detail || project.name} />}
           <div class="flex justify-between items-center">
             {third && <h4 class="text-sm">{third.detail}</h4>}
             <span class="text-xs">{project.tag}</span>
           </div>
         </div>
         <div class="w-full sm:w-3/4 pl-2 md:pl-24 mt-48">
-          {fourth && <Image src={fourth.src} alt="picture 3" />}
+          {fourth && <Image src={fourth.src} alt={fourth.detail || project.name} />}
           <div class="flex justify-between items-center">
             {fourth && <h4 class="text-sm">{fourth.detail}</h4>}
             <span class="text-xs">{project.tag}</span>
@@ -94,7 +96,7 @@ export default function Work({ project, projects }: WorkProps) {
 
       <div class="my-24 sm:my-48 px-4">
         <div class="w-full sm:w-3/4 mx-auto">
-          {fifth && <Image src={fifth.src} alt="picture 5" />}
+          {fifth && <Image src={fifth.src} alt={fifth.detail || project.name} />}
           <div class="flex justify-between items-center">
             {fifth && <h4 class="text-sm">{fifth.detail}</h4>}
             <span class="text-xs">{project.tag}</span>
@@ -105,7 +107,10 @@ export default function Work({ project, projects }: WorkProps) {
       {project.images[5] && (
         <div class="my-24 sm:my-48 px-4">
           <div class="w-full sm:w-3/4 mx-auto">
-            <Image src={project.images[5].src} alt="picture 6" />
+            <Image
+              src={project.images[5].src}
+              alt={project.images[5].detail || project.name}
+            />
             <div class="flex justify-between items-center">
               <h4 class="text-sm">{project.images[5].detail}</h4>
               <span class="text-xs">{project.tag}</span>

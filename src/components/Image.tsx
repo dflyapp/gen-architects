@@ -6,6 +6,12 @@ type ImageProps = {
   loading?: 'lazy' | 'eager'
 }
 
+/**
+ * Small `<img>` wrapper that enforces best practices for SEO and
+ * accessibility: a meaningful `alt`, explicit dimensions where possible to
+ * avoid layout shift, and lazy loading by default (except for above-the-fold
+ * images, which should opt into `eager`).
+ */
 export default function Image({
   src,
   alt,
@@ -20,6 +26,7 @@ export default function Image({
       class={className}
       style={style}
       loading={loading}
+      decoding="async"
     />
   )
 }

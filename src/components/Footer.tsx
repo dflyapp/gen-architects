@@ -14,7 +14,7 @@ export default function Footer({ projects }: FooterProps) {
               <div class="w-full md:w-auto order-1 md:order-1 md:px-3 overflow-hidden mt-32 md:mt-0 mb-16 md:mb-0 flex justify-between items-center">
                 <img
                   src="/assets/svg/logo_picture.svg"
-                  alt="logo"
+                  alt="Gen Architects logo"
                   style="width: 100px; height: auto"
                   class="mx-auto"
                 />

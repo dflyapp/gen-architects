@@ -3,10 +3,10 @@ export default function Contact() {
     <section class="pb-4 pt-12 md:pb-14 md:pt-20 xl:pb-20 xl:pt-24">
       <div class="w-full md:w-9/12 mx-auto px-4 md:px-5 mb-0 md:mb-24 lg:mb-32 3xl:mb-40">
         <div class="max-w-sm pr-12 md:pr-0 md:max-w-lg lg:max-w-2xl p-3 md:p-0 -mx-4 md:mx-0 mb-2 md:mb-8">
-          <span class="block font-display text-4xl md:text-6xl leading-slightnegative pr-1">
+          <h2 class="block font-display text-4xl md:text-6xl leading-slightnegative pr-1">
             Need help with a <span class="block">residential project</span>
             Get in touch.
-          </span>
+          </h2>
         </div>
         <div class="flex flex-wrap border-t border-b border-black w-auto pr-12 md:pr-0 md:w-full">
           <a

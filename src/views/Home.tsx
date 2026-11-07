@@ -9,7 +9,7 @@ export default function Home({ projects }: HomeProps) {
   return (
     <div>
       <div class="w-screen h-screen relative overflow-x-hidden">
-        <header class="flex justify-between p-8">
+        <nav aria-label="Main" class="flex justify-between p-8">
           <div class="animate-slide-down">
             <a class="text-2xl" href="/">
               Gallery
@@ -24,7 +24,7 @@ export default function Home({ projects }: HomeProps) {
               Menu
             </a>
           </div>
-        </header>
+        </nav>
 
         <div class="px-8">
           <hr />
@@ -35,7 +35,7 @@ export default function Home({ projects }: HomeProps) {
             <img
               style="width: 80px; height: auto"
               src="/assets/svg/logo_picture.svg"
-              alt="gen"
+              alt="Gen Architects logo"
             />
           </div>
           <Carousel index={0} projects={projects} />

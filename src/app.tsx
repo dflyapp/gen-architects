@@ -39,7 +39,12 @@ import {
   readProjectForm,
   type ProjectFormValues,
 } from './lib/validation'
-import Layout from './layout'
+import Layout, {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_OG_IMAGE,
+  SITE_NAME,
+  SITE_URL,
+} from './layout'
 import Home from './views/Home'
 import Work from './views/Work'
 import CmsLayout from './views/cms/CmsLayout'
@@ -147,7 +152,12 @@ export function createApp() {
   app.get('/', async (c) => {
     const projects = await getPublishedProjects(c.env.DB)
     return c.html(
-      <Layout title="Gen Architects">
+      <Layout
+        title={SITE_NAME}
+        description={DEFAULT_DESCRIPTION}
+        canonical={SITE_URL}
+        ogImage={DEFAULT_OG_IMAGE}
+      >
         <Home projects={projects} />
       </Layout>
     )
@@ -166,8 +176,33 @@ export function createApp() {
       return c.notFound()
     }
 
+    const url = `${SITE_URL}/work/${project.id}`
+    const description =
+      project.description || project.coverDesc || DEFAULT_DESCRIPTION
+    const ogImage = project.cover || DEFAULT_OG_IMAGE
+
+    const projectJsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'CreativeWork',
+      name: project.name,
+      description,
+      url,
+      image: ogImage,
+      ...(project.location ? { contentLocation: project.location } : {}),
+      ...(project.tag ? { keywords: project.tag } : {}),
+      ...(project.category ? { genre: project.category } : {}),
+    }
+
     return c.html(
-      <Layout title={project.name}>
+      <Layout
+        title={project.name}
+        description={description}
+        canonical={url}
+        ogType="article"
+        ogImage={ogImage}
+        ogImageAlt={project.name}
+        jsonLd={projectJsonLd}
+      >
         <Work project={project} projects={projects} />
       </Layout>
     )
@@ -199,6 +234,41 @@ export function createApp() {
 
     const response = await serveMedia(c.env, key, c.req.raw)
     return response ?? c.notFound()
+  })
+
+  app.get('/robots.txt', (c) =>
+    c.text(
+      `User-agent: *\nAllow: /\nDisallow: /cms\n\nSitemap: ${SITE_URL}/sitemap.xml\n`,
+      200,
+      { 'Content-Type': 'text/plain; charset=utf-8' }
+    )
+  )
+
+  app.get('/sitemap.xml', async (c) => {
+    const projects = await getPublishedProjects(c.env.DB)
+
+    const urls = [
+      { loc: SITE_URL, priority: '1.0' },
+      ...projects.map((project) => ({
+        loc: `${SITE_URL}/work/${project.id}`,
+        priority: '0.8',
+      })),
+    ]
+      .map(
+        ({ loc, priority }) =>
+          `  <url>\n    <loc>${loc}</loc>\n    <priority>${priority}</priority>\n  </url>`
+      )
+      .join('\n')
+
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls}
+</urlset>
+`
+
+    return c.text(xml, 200, {
+      'Content-Type': 'application/xml; charset=utf-8',
+    })
   })
 
   app.get('/api/hello', (c) => c.json({ name: 'John Doe' }))
@@ -546,7 +616,7 @@ export function createApp() {
     }
 
     return c.html(
-      <Layout title="Page not found">
+      <Layout title="Page not found" noindex>
         <main class="p-8">
           <h1>404</h1>
           <p>Page not found.</p>
@@ -589,7 +659,7 @@ export function createApp() {
     }
 
     return c.html(
-      <Layout title="Something went wrong">
+      <Layout title="Something went wrong" noindex>
         <main class="p-8">
           <h1>500</h1>
           <p>Something went wrong.</p>

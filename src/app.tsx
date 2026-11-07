@@ -57,6 +57,19 @@ function parseId(value: string | undefined): number | null {
   return Number.isInteger(id) && id > 0 ? id : null
 }
 
+// Normalize a media URL to an absolute URL so Open Graph and
+// Twitter Card crawlers can resolve the image regardless of whether
+// the stored path is relative or absolute.
+function absoluteUrl(value: string): string {
+  if (!value) {
+    return DEFAULT_OG_IMAGE
+  }
+  if (/^https?:\/\//i.test(value)) {
+    return value
+  }
+  return `${SITE_URL}${value.startsWith('/') ? '' : '/'}${value}`
+}
+
 function emptyProjectValues(): ProjectFormValues {
   return {
     name: '',
@@ -179,7 +192,7 @@ export function createApp() {
     const url = `${SITE_URL}/work/${project.id}`
     const description =
       project.description || project.coverDesc || DEFAULT_DESCRIPTION
-    const ogImage = project.cover || DEFAULT_OG_IMAGE
+    const ogImage = absoluteUrl(project.cover || DEFAULT_OG_IMAGE)
 
     const projectJsonLd = {
       '@context': 'https://schema.org',

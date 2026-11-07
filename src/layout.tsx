@@ -93,7 +93,7 @@ export default function Layout({
         <meta property="og:description" content="${description}" />
         <meta property="og:url" content="${canonicalUrl}" />
         <meta property="og:image" content="${ogImage}" />
-        ${ogImageAlt ? `<meta property="og:image:alt" content="${ogImageAlt}" />` : ''}
+        ${ogImageAlt ? raw(`<meta property="og:image:alt" content="${ogImageAlt}" />`) : ''}
 
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image" />
@@ -102,9 +102,13 @@ export default function Layout({
         <meta name="twitter:image" content="${ogImage}" />
 
         <!-- Structured data -->
-        ${structuredData.map(
-          (item) =>
-            `<script type="application/ld+json">${raw(jsonLdScript(item))}</script>`
+        ${raw(
+          structuredData
+            .map(
+              (item) =>
+                `<script type="application/ld+json">${jsonLdScript(item)}</script>`
+            )
+            .join('\n')
         )}
 
         <script
